@@ -1,0 +1,40 @@
+{
+  "app_name": "Polycam - LiDAR 3D Scanner",
+  "app_version": "v4.1.2 (iOS Build 1842)",
+  "capture_tier": "LiDAR",
+  "export_format": "RoomMode_JSON_v2",
+  "export_timestamp": "2026-09-02T10:14:22Z",
+  "device": "iPhone 15 Pro Max (iOS 18.0)",
+  "rooms": {
+    "living_room": {
+      "name": "Living Room",
+      "floor_area_m2": 17.38,
+      "ceiling_height_m": 3.031,
+      "wall_dimensions_m": {
+        "LIV_W1": 3.558,
+        "LIV_W2": 4.846,
+        "LIV_W3": 3.551,
+        "LIV_W4": 4.908
+      },
+      "openings_m": {
+        "OP_LIV_ENTRY": 0.884,
+        "OP_LIV_WINDOW": 1.636,
+        "OP_LIV_PASSAGE": 1.135
+      }
+    },
+    "bathroom": {
+      "name": "Bathroom",
+      "floor_area_m2": 4.14,
+      "ceiling_height_m": 2.824,
+      "wall_dimensions_m": {
+        "BATH_W1": 2.235,
+        "BATH_W2": 1.821,
+        "BATH_W3": 2.228,
+        "BATH_W4": 1.879
+      },
+      "openings_m": {
+        "OP_BATH_DOOR": 0.781
+      }
+    }
+  }
+}

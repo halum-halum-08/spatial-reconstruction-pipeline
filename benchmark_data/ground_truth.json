@@ -1,0 +1,117 @@
+{
+  "property_id": "APT-2026-BENCHMARK-01",
+  "description": "Multi-room residential apartment suite: Living/Kitchen, Dining Room, Bathroom, Central Hallway Connector",
+  "measurement_device": "Leica DISTO D2 Laser Measurer (accuracy ±1.5 mm) & Stanley FatMax 8m Class II Tape",
+  "units": "meters",
+  "global_metrics": {
+    "total_interior_floor_area_m2": 37.815,
+    "total_gross_footprint_m2": 43.48,
+    "overall_bounding_box_m": {
+      "width_x": 8.35,
+      "length_z": 9.15
+    }
+  },
+  "rooms": {
+    "living_room": {
+      "name": "Living & Kitchen Suite",
+      "type": "living_room",
+      "floor_area_m2": 17.178,
+      "ceiling_height_m": 3.055,
+      "bounding_dimensions_m": {
+        "width_x": 3.520,
+        "length_z": 4.880
+      },
+      "walls": [
+        {"wall_id": "LIV_W1", "start": [-0.50, 0.00], "end": [3.02, 0.00], "length_m": 3.520, "height_m": 3.055},
+        {"wall_id": "LIV_W2", "start": [3.02, 0.00], "end": [3.02, 4.88], "length_m": 4.880, "height_m": 3.055},
+        {"wall_id": "LIV_W3", "start": [3.02, 4.88], "end": [-0.50, 4.88], "length_m": 3.520, "height_m": 3.055},
+        {"wall_id": "LIV_W4", "start": [-0.50, 4.88], "end": [-0.50, 0.00], "length_m": 4.880, "height_m": 3.055}
+      ],
+      "openings": [
+        {"opening_id": "OP_LIV_ENTRY", "type": "door", "wall_id": "LIV_W3", "width_m": 0.850, "height_m": 2.100, "start_pos_m": 1.200},
+        {"opening_id": "OP_LIV_WINDOW", "type": "window", "wall_id": "LIV_W1", "width_m": 1.600, "height_m": 1.400, "start_pos_m": 0.950},
+        {"opening_id": "OP_LIV_PASSAGE", "type": "passage", "wall_id": "LIV_W2", "width_m": 1.100, "height_m": 2.100, "start_pos_m": 2.400}
+      ],
+      "damage": [
+        {
+          "damage_id": "DMG_01",
+          "surface_id": "LIV_W2",
+          "damage_class": "water_damage",
+          "extent_width_m": 1.250,
+          "extent_height_m": 0.450,
+          "area_m2": 0.5625,
+          "severity": "moderate",
+          "concealed_flag": "RULE_CONCEALED_WTR_01"
+        },
+        {
+          "damage_id": "DMG_02",
+          "surface_id": "LIV_W1",
+          "damage_class": "structural_crack",
+          "extent_width_m": 0.950,
+          "extent_height_m": 0.050,
+          "area_m2": 0.0475,
+          "severity": "minor",
+          "concealed_flag": "RULE_STRUCT_CORNER_03"
+        }
+      ]
+    },
+    "bathroom": {
+      "name": "Full Bathroom",
+      "type": "bathroom",
+      "floor_area_m2": 4.070,
+      "ceiling_height_m": 2.850,
+      "bounding_dimensions_m": {
+        "width_x": 2.200,
+        "length_z": 1.850
+      },
+      "walls": [
+        {"wall_id": "BATH_W1", "start": [-2.70, 7.00], "end": [-0.50, 7.00], "length_m": 2.200, "height_m": 2.850},
+        {"wall_id": "BATH_W2", "start": [-0.50, 7.00], "end": [-0.50, 8.85], "length_m": 1.850, "height_m": 2.850},
+        {"wall_id": "BATH_W3", "start": [-0.50, 8.85], "end": [-2.70, 8.85], "length_m": 2.200, "height_m": 2.850},
+        {"wall_id": "BATH_W4", "start": [-2.70, 8.85], "end": [-2.70, 7.00], "length_m": 1.850, "height_m": 2.850}
+      ],
+      "openings": [
+        {"opening_id": "OP_BATH_DOOR", "type": "door", "wall_id": "BATH_W2", "width_m": 0.750, "height_m": 2.050, "start_pos_m": 0.550}
+      ]
+    },
+    "dining_room": {
+      "name": "Dining Room",
+      "type": "dining_room",
+      "floor_area_m2": 11.315,
+      "ceiling_height_m": 3.055,
+      "bounding_dimensions_m": {
+        "width_x": 3.650,
+        "length_z": 3.100
+      },
+      "walls": [
+        {"wall_id": "DIN_W1", "start": [2.40, 5.75], "end": [6.05, 5.75], "length_m": 3.650, "height_m": 3.055},
+        {"wall_id": "DIN_W2", "start": [6.05, 5.75], "end": [6.05, 8.85], "length_m": 3.100, "height_m": 3.055},
+        {"wall_id": "DIN_W3", "start": [6.05, 8.85], "end": [2.40, 8.85], "length_m": 3.650, "height_m": 3.055},
+        {"wall_id": "DIN_W4", "start": [2.40, 8.85], "end": [2.40, 5.75], "length_m": 3.100, "height_m": 3.055}
+      ],
+      "openings": [
+        {"opening_id": "OP_DIN_ENTRY", "type": "passage", "wall_id": "DIN_W4", "width_m": 0.900, "height_m": 2.100, "start_pos_m": 1.100},
+        {"opening_id": "OP_DIN_WINDOW", "type": "window", "wall_id": "DIN_W2", "width_m": 1.400, "height_m": 1.400, "start_pos_m": 0.850}
+      ]
+    },
+    "hallway_connector": {
+      "name": "Central Hallway & Connector",
+      "type": "hallway",
+      "floor_area_m2": 5.250,
+      "ceiling_height_m": 3.055,
+      "bounding_dimensions_m": {
+        "width_x": 1.250,
+        "length_z": 4.200
+      },
+      "walls": [
+        {"wall_id": "HALL_W1", "start": [-0.50, 4.88], "end": [0.75, 4.88], "length_m": 1.250, "height_m": 3.055},
+        {"wall_id": "HALL_W2", "start": [0.75, 4.88], "end": [0.75, 9.08], "length_m": 4.200, "height_m": 3.055},
+        {"wall_id": "HALL_W3", "start": [0.75, 9.08], "end": [-0.50, 9.08], "length_m": 1.250, "height_m": 3.055},
+        {"wall_id": "HALL_W4", "start": [-0.50, 9.08], "end": [-0.50, 4.88], "length_m": 4.200, "height_m": 3.055}
+      ],
+      "openings": [
+        {"opening_id": "OP_HALL_STAIR", "type": "passage", "wall_id": "HALL_W2", "width_m": 1.050, "height_m": 2.100, "start_pos_m": 1.800}
+      ]
+    }
+  }
+}
