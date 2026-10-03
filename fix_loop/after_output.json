@@ -1,0 +1,74 @@
+{
+  "run": "AFTER_FIX",
+  "gate_evaluated": "Metric Gate: Opening Widths <= 2.0 cm on >= 85%",
+  "shipped_number": "100.0%",
+  "predicted_number": "100.0%",
+  "gate_status": "PASS",
+  "openings_passed": "7/7",
+  "mean_error_cm": 0.63,
+  "detailed_results": [
+    {
+      "opening_id": "OP_LIV_ENTRY",
+      "type": "door",
+      "room": "Living & Kitchen Suite",
+      "ground_truth_m": 0.85,
+      "measured_m": 0.858,
+      "error_cm": 0.8,
+      "status": "PASS"
+    },
+    {
+      "opening_id": "OP_LIV_WINDOW",
+      "type": "window",
+      "room": "Living & Kitchen Suite",
+      "ground_truth_m": 1.6,
+      "measured_m": 1.59,
+      "error_cm": 1.0,
+      "status": "PASS"
+    },
+    {
+      "opening_id": "OP_LIV_PASSAGE",
+      "type": "passage",
+      "room": "Living & Kitchen Suite",
+      "ground_truth_m": 1.1,
+      "measured_m": 1.103,
+      "error_cm": 0.3,
+      "status": "PASS"
+    },
+    {
+      "opening_id": "OP_BATH_DOOR",
+      "type": "door",
+      "room": "Full Bathroom",
+      "ground_truth_m": 0.75,
+      "measured_m": 0.748,
+      "error_cm": 0.2,
+      "status": "PASS"
+    },
+    {
+      "opening_id": "OP_DIN_ENTRY",
+      "type": "passage",
+      "room": "Dining Room",
+      "ground_truth_m": 0.9,
+      "measured_m": 0.905,
+      "error_cm": 0.5,
+      "status": "PASS"
+    },
+    {
+      "opening_id": "OP_DIN_WINDOW",
+      "type": "window",
+      "room": "Dining Room",
+      "ground_truth_m": 1.4,
+      "measured_m": 1.385,
+      "error_cm": 1.5,
+      "status": "PASS"
+    },
+    {
+      "opening_id": "OP_HALL_STAIR",
+      "type": "passage",
+      "room": "Central Hallway & Connector",
+      "ground_truth_m": 1.05,
+      "measured_m": 1.049,
+      "error_cm": 0.1,
+      "status": "PASS"
+    }
+  ]
+}
