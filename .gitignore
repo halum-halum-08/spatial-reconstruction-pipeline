@@ -4,4 +4,7 @@ __pycache__/
 *.pyc
 *.zip
 .system_generated/
-raw_data/
+extracted_frames/
+extracted_frames_c7/
+*.mp4
+data/*/*.mp4
