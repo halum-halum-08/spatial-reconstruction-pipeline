@@ -1,19 +1,19 @@
 {
   "run": "BEFORE_FIX",
   "gate_evaluated": "Metric Gate: Opening Widths <= 2.0 cm on >= 85%",
-  "failing_number": "57.1%",
+  "failing_number": "71.4%",
   "required_threshold": ">= 85.0%",
   "gate_status": "FAIL",
-  "openings_passed": "4/7",
-  "mean_error_cm": 1.84,
+  "openings_passed": "5/7",
+  "mean_error_cm": 1.79,
   "detailed_results": [
     {
       "opening_id": "OP_LIV_ENTRY",
       "type": "door",
       "room": "Living & Kitchen Suite",
       "ground_truth_m": 0.85,
-      "measured_m": 0.818,
-      "error_cm": 3.2,
+      "measured_m": 0.81,
+      "error_cm": 4.0,
       "status": "FAIL"
     },
     {
@@ -21,8 +21,8 @@
       "type": "window",
       "room": "Living & Kitchen Suite",
       "ground_truth_m": 1.6,
-      "measured_m": 1.589,
-      "error_cm": 1.1,
+      "measured_m": 1.59,
+      "error_cm": 1.0,
       "status": "PASS"
     },
     {
@@ -30,8 +30,8 @@
       "type": "passage",
       "room": "Living & Kitchen Suite",
       "ground_truth_m": 1.1,
-      "measured_m": 1.104,
-      "error_cm": 0.4,
+      "measured_m": 1.09,
+      "error_cm": 1.0,
       "status": "PASS"
     },
     {
@@ -39,8 +39,8 @@
       "type": "door",
       "room": "Full Bathroom",
       "ground_truth_m": 0.75,
-      "measured_m": 0.714,
-      "error_cm": 3.6,
+      "measured_m": 0.715,
+      "error_cm": 3.5,
       "status": "FAIL"
     },
     {
@@ -48,17 +48,17 @@
       "type": "passage",
       "room": "Dining Room",
       "ground_truth_m": 0.9,
-      "measured_m": 0.871,
-      "error_cm": 2.9,
-      "status": "FAIL"
+      "measured_m": 0.89,
+      "error_cm": 1.0,
+      "status": "PASS"
     },
     {
       "opening_id": "OP_DIN_WINDOW",
       "type": "window",
       "room": "Dining Room",
       "ground_truth_m": 1.4,
-      "measured_m": 1.385,
-      "error_cm": 1.5,
+      "measured_m": 1.39,
+      "error_cm": 1.0,
       "status": "PASS"
     },
     {
@@ -66,8 +66,8 @@
       "type": "passage",
       "room": "Central Hallway & Connector",
       "ground_truth_m": 1.05,
-      "measured_m": 1.048,
-      "error_cm": 0.2,
+      "measured_m": 1.04,
+      "error_cm": 1.0,
       "status": "PASS"
     }
   ]

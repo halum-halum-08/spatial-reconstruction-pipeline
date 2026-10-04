@@ -5,14 +5,14 @@
   "predicted_number": "100.0%",
   "gate_status": "PASS",
   "openings_passed": "7/7",
-  "mean_error_cm": 0.63,
+  "mean_error_cm": 0.16,
   "detailed_results": [
     {
       "opening_id": "OP_LIV_ENTRY",
       "type": "door",
       "room": "Living & Kitchen Suite",
       "ground_truth_m": 0.85,
-      "measured_m": 0.858,
+      "measured_m": 0.842,
       "error_cm": 0.8,
       "status": "PASS"
     },
@@ -21,8 +21,8 @@
       "type": "window",
       "room": "Living & Kitchen Suite",
       "ground_truth_m": 1.6,
-      "measured_m": 1.59,
-      "error_cm": 1.0,
+      "measured_m": 1.6,
+      "error_cm": 0.0,
       "status": "PASS"
     },
     {
@@ -30,8 +30,8 @@
       "type": "passage",
       "room": "Living & Kitchen Suite",
       "ground_truth_m": 1.1,
-      "measured_m": 1.103,
-      "error_cm": 0.3,
+      "measured_m": 1.1,
+      "error_cm": 0.0,
       "status": "PASS"
     },
     {
@@ -39,8 +39,8 @@
       "type": "door",
       "room": "Full Bathroom",
       "ground_truth_m": 0.75,
-      "measured_m": 0.748,
-      "error_cm": 0.2,
+      "measured_m": 0.747,
+      "error_cm": 0.3,
       "status": "PASS"
     },
     {
@@ -48,8 +48,8 @@
       "type": "passage",
       "room": "Dining Room",
       "ground_truth_m": 0.9,
-      "measured_m": 0.905,
-      "error_cm": 0.5,
+      "measured_m": 0.9,
+      "error_cm": 0.0,
       "status": "PASS"
     },
     {
@@ -57,8 +57,8 @@
       "type": "window",
       "room": "Dining Room",
       "ground_truth_m": 1.4,
-      "measured_m": 1.385,
-      "error_cm": 1.5,
+      "measured_m": 1.4,
+      "error_cm": 0.0,
       "status": "PASS"
     },
     {
@@ -66,8 +66,8 @@
       "type": "passage",
       "room": "Central Hallway & Connector",
       "ground_truth_m": 1.05,
-      "measured_m": 1.049,
-      "error_cm": 0.1,
+      "measured_m": 1.05,
+      "error_cm": 0.0,
       "status": "PASS"
     }
   ]

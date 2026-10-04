@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Property Survey Plan - single_scan_with_ceiling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #1A365D;
+      --accent: #3182CE;
+      --bg: #F7FAFC;
+      --card-bg: #FFFFFF;
+      --border: #E2E8F0;
+      --text: #2D3748;
+      --danger: #E53E3E;
+      --warning: #DD6B20;
+      --success: #38A169;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card-bg);
+      padding: 20px 28px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-lidar { background: #C6F6D5; color: #22543D; }
+    .badge-video { background: #BEE3F8; color: #2A4365; }
+    .badge-photo { background: #FEFCBF; color: #744210; }
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .plan-viewer {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #FAFAFA;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+    th {
+      background: #EDF2F7;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .flag-box {
+      background: #FFF5F5;
+      border-left: 4px solid var(--danger);
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1 style="margin:0 0 6px 0; font-size:24px; color:var(--primary);">Survey Floor Plan & Scope Report</h1>
+      <div style="font-size:14px; color:#718096;">
+        Capture ID: <strong>single_scan_with_ceiling</strong> | Device: <strong>iPhone 15 Pro Max (LiDAR Scanner)</strong> | Recorded: 2026-09-01T23:48:00Z
+      </div>
+    </div>
+    <div>
+      <span class="badge badge-lidar">LIDAR TIER</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2 style="margin-top:0; font-size:18px;">Dimensioned Floor Plan</h2>
+      <div class="plan-viewer">
+        <img src="floorplan.svg" alt="Floor Plan" style="max-width:100%; height:auto;" />
+      </div>
+      <div style="display:flex; justify-content:space-around; margin-top:20px; font-size:14px;">
+        <div><strong>Total Interior Area:</strong> 37.81 m² (CI: [37.22, 38.41])</div>
+        <div><strong>Total Rooms:</strong> 4</div>
+        <div><strong>Walls Bounded:</strong> 16</div>
+        <div><strong>Openings Detected:</strong> 7</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:24px;">
+        <h2 style="margin-top:0; font-size:18px; color:var(--danger);">Concealed Damage Risk Flags</h2>
+        
+        <div class="flag-box">
+          <div style="font-weight:bold; color:var(--danger);">Wall Cavity Trapped Moisture & Insulation Saturation</div>
+          <div style="font-size:12px; margin-top:4px;"><strong>Trigger:</strong> Moisture staining observed on lower 0.6m of gypsum board</div>
+          <div style="font-size:12px; margin-top:4px;"><strong>Evidence:</strong> Continuous dampness and wood trim swelling spanning 1.25m</div>
+          <div style="font-size:12px; margin-top:4px; color:#742A2A;"><strong>Recommended Action:</strong> Execute 2-foot flood cut, extract cavity moisture, and treat framing with antimicrobial.</div>
+        </div>
+        
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top:0; font-size:18px; color:var(--primary);">Xactimate Remediation Scope</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Surface</th>
+              <th>Qty</th>
+              <th>Total ($)</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td><strong>DRYWALL_CUT</strong></td>
+              <td>LIV_W2</td>
+              <td>1.85 m</td>
+              <td>$70.30</td>
+            </tr>
+            
+            <tr>
+              <td><strong>BASEBOARD_REPLACE</strong></td>
+              <td>LIV_W2</td>
+              <td>1.85 m</td>
+              <td>$52.73</td>
+            </tr>
+            
+            <tr>
+              <td><strong>INSULATION_REPLACE</strong></td>
+              <td>LIV_W2</td>
+              <td>1.13 m2</td>
+              <td>$29.38</td>
+            </tr>
+            
+          </tbody>
+          <tfoot>
+            <tr style="font-weight:bold; background:#EDF2F7;">
+              <td colspan="3">Estimated Remediation Total:</td>
+              <td>$152.41</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

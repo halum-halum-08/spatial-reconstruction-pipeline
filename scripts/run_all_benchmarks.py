@@ -41,30 +41,30 @@ def run_benchmark():
     # 1. Run LiDAR Tier
     t0 = time.time()
     lidar_pipe = LidarPipeline(enable_drift_correction=True)
-    lidar_plan = lidar_pipe.run("single_scan_with_ceiling.zip", gt_path, "outputs/lidar")
+    lidar_plan = lidar_pipe.run("single_scan_with_ceiling.zip", "outputs/lidar")
     t_lidar = time.time() - t0
 
     # 2. Run LiDAR Tier without Drift Correction (Ablation)
     t0 = time.time()
     lidar_pipe_nodrift = LidarPipeline(enable_drift_correction=False)
-    lidar_plan_nodrift = lidar_pipe_nodrift.run("single_scan_with_ceiling.zip", gt_path, "outputs/lidar_nodrift")
+    lidar_plan_nodrift = lidar_pipe_nodrift.run("single_scan_with_ceiling.zip", "outputs/lidar_nodrift")
     t_nodrift = time.time() - t0
 
     # 3. Run Repeatability Scan (single_room.zip)
     t0 = time.time()
-    repeat_plan = lidar_pipe.run("single_room.zip", gt_path, "outputs/lidar_repeat")
+    repeat_plan = lidar_pipe.run("single_room.zip", "outputs/lidar_repeat")
     t_repeat = time.time() - t0
 
     # 4. Run Video Tier
     t0 = time.time()
     video_pipe = VideoPipeline()
-    video_plan = video_pipe.run("data/c7d28f72c6/rgb.mp4", gt_path, "outputs/video")
+    video_plan = video_pipe.run("data/c7d28f72c6/rgb.mp4", "outputs/video")
     t_video = time.time() - t0
 
     # 5. Run Photo Tier
     t0 = time.time()
     photo_pipe = PhotoPipeline()
-    photo_plan = photo_pipe.run("benchmark_data/photos/", gt_path, "outputs/photo")
+    photo_plan = photo_pipe.run("benchmark_data/photos/", "outputs/photo")
     t_photo = time.time() - t0
 
     print("[*] All benchmark pipelines executed successfully.\n")

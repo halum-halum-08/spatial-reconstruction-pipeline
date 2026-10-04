@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 441 550" width="100%" height="100%">
+<defs>
+  <style>
+    .room-poly { stroke: none; fill-opacity: 0.85; transition: fill 0.3s; }
+    .wall-line { stroke: #2C3E50; stroke-width: 6; stroke-linecap: round; }
+    .opening-door { stroke: #E67E22; stroke-width: 5; stroke-dasharray: 4,4; }
+    .opening-win { stroke: #2980B9; stroke-width: 4; }
+    .room-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: bold; fill: #2C3E50; text-anchor: middle; }
+    .dim-label { font-family: monospace; font-size: 11px; fill: #7F8C8D; text-anchor: middle; }
+    .damage-marker { fill: #E74C3C; stroke: #C0392B; stroke-width: 2; cursor: pointer; }
+  </style>
+</defs>
+<rect width="441" height="550" fill="#FAFAFA" />
+<polygon class="room-poly" points="80.0,80.0 361.59999999999997,80.0 361.59999999999997,470.4 80.0,470.4" fill="#EBF3FB" id="poly-living_room"/>
+<line class="wall-line" x1="80.0" y1="80.0" x2="361.6" y2="80.0" />
+<text class="dim-label" x="220.8" y="94.0">3.52m (±1.4cm)</text>
+<line class="opening-win" x1="156.0" y1="80.0" x2="284.0" y2="80.0" />
+<line class="wall-line" x1="361.6" y1="80.0" x2="361.6" y2="470.4" />
+<text class="dim-label" x="347.6" y="275.2">4.88m (±1.8cm)</text>
+<line class="opening-door" x1="361.6" y1="272.0" x2="361.6" y2="360.0" />
+<line class="wall-line" x1="361.6" y1="470.4" x2="80.0" y2="470.4" />
+<text class="dim-label" x="220.8" y="456.4">3.52m (±1.4cm)</text>
+<line class="opening-door" x1="265.6" y1="470.4" x2="198.2" y2="470.4" />
+<line class="wall-line" x1="80.0" y1="470.4" x2="80.0" y2="80.0" />
+<text class="dim-label" x="94.0" y="275.2">4.88m (±1.8cm)</text>
+<text class="room-label" x="220.8" y="275.2">Living & Kitchen Suite</text>
+<text class="dim-label" x="220.8" y="293.2">17.18 m² | H: 3.06m</text>
+<circle class="damage-marker" cx="260.8" cy="243.2" r="8" />
+<text x="272.8" y="247.2" font-size="10" font-weight="bold" fill="#C0392B">WATER_DAMAGE (1.25m)</text>
+</svg>

@@ -1,0 +1,1512 @@
+{
+  "capture_id": "single_room",
+  "input_tier": "lidar",
+  "device_model": "iPhone 15 Pro Max (LiDAR Scanner)",
+  "timestamp": "2026-09-01T23:48:00Z",
+  "rooms": [
+    {
+      "room_id": "living_room",
+      "name": "Living & Kitchen Suite",
+      "room_type": "living_room",
+      "floor_area": {
+        "value": 17.1776,
+        "unit": "m2",
+        "ci_lower": 16.9083,
+        "ci_upper": 17.4469,
+        "confidence_level": 0.95,
+        "standard_error": 0.1374
+      },
+      "ceiling_height": {
+        "value": 3.0565,
+        "unit": "m",
+        "ci_lower": 3.0404,
+        "ci_upper": 3.0726,
+        "confidence_level": 0.95,
+        "standard_error": 0.0082
+      },
+      "walls": [
+        {
+          "wall_id": "LIV_W1",
+          "start_point": [
+            -0.5,
+            0.0
+          ],
+          "end_point": [
+            3.02,
+            0.0
+          ],
+          "length": {
+            "value": 3.5151,
+            "unit": "m",
+            "ci_lower": 3.4874,
+            "ci_upper": 3.5429,
+            "confidence_level": 0.95,
+            "standard_error": 0.0142
+          },
+          "height": {
+            "value": 3.0565,
+            "unit": "m",
+            "ci_lower": 3.0404,
+            "ci_upper": 3.0726,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            -0.0,
+            1.0
+          ],
+          "surface_area": {
+            "value": 10.744,
+            "unit": "m2",
+            "ci_lower": 10.5756,
+            "ci_upper": 10.9125,
+            "confidence_level": 0.95,
+            "standard_error": 0.086
+          },
+          "openings": [
+            {
+              "opening_id": "OP_LIV_WINDOW",
+              "type": "window",
+              "wall_id": "LIV_W1",
+              "start_pos": 0.95,
+              "width": {
+                "value": 1.608,
+                "unit": "m",
+                "ci_lower": 1.588,
+                "ci_upper": 1.628,
+                "confidence_level": 0.95,
+                "standard_error": 0.0102
+              },
+              "height": {
+                "value": 1.3983,
+                "unit": "m",
+                "ci_lower": 1.3862,
+                "ci_upper": 1.4104,
+                "confidence_level": 0.95,
+                "standard_error": 0.0062
+              },
+              "connected_room_id": null,
+              "center_world_2d": [
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "wall_id": "LIV_W2",
+          "start_point": [
+            3.02,
+            0.0
+          ],
+          "end_point": [
+            3.02,
+            4.88
+          ],
+          "length": {
+            "value": 4.8785,
+            "unit": "m",
+            "ci_lower": 4.8423,
+            "ci_upper": 4.9146,
+            "confidence_level": 0.95,
+            "standard_error": 0.0185
+          },
+          "height": {
+            "value": 3.0565,
+            "unit": "m",
+            "ci_lower": 3.0404,
+            "ci_upper": 3.0726,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            -1.0,
+            0.0
+          ],
+          "surface_area": {
+            "value": 14.9111,
+            "unit": "m2",
+            "ci_lower": 14.6773,
+            "ci_upper": 15.1449,
+            "confidence_level": 0.95,
+            "standard_error": 0.1193
+          },
+          "openings": [
+            {
+              "opening_id": "OP_LIV_PASSAGE",
+              "type": "passage",
+              "wall_id": "LIV_W2",
+              "start_pos": 2.4,
+              "width": {
+                "value": 1.0947,
+                "unit": "m",
+                "ci_lower": 1.0764,
+                "ci_upper": 1.113,
+                "confidence_level": 0.95,
+                "standard_error": 0.0093
+              },
+              "height": {
+                "value": 2.1011,
+                "unit": "m",
+                "ci_lower": 2.0876,
+                "ci_upper": 2.1147,
+                "confidence_level": 0.95,
+                "standard_error": 0.0069
+              },
+              "connected_room_id": null,
+              "center_world_2d": [
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "wall_id": "LIV_W3",
+          "start_point": [
+            3.02,
+            4.88
+          ],
+          "end_point": [
+            -0.5,
+            4.88
+          ],
+          "length": {
+            "value": 3.5381,
+            "unit": "m",
+            "ci_lower": 3.5102,
+            "ci_upper": 3.5659,
+            "confidence_level": 0.95,
+            "standard_error": 0.0142
+          },
+          "height": {
+            "value": 3.0565,
+            "unit": "m",
+            "ci_lower": 3.0404,
+            "ci_upper": 3.0726,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            -0.0,
+            -1.0
+          ],
+          "surface_area": {
+            "value": 10.8142,
+            "unit": "m2",
+            "ci_lower": 10.6446,
+            "ci_upper": 10.9837,
+            "confidence_level": 0.95,
+            "standard_error": 0.0865
+          },
+          "openings": [
+            {
+              "opening_id": "OP_LIV_ENTRY",
+              "type": "door",
+              "wall_id": "LIV_W3",
+              "start_pos": 1.2,
+              "width": {
+                "value": 0.8602,
+                "unit": "m",
+                "ci_lower": 0.8425,
+                "ci_upper": 0.8778,
+                "confidence_level": 0.95,
+                "standard_error": 0.009
+              },
+              "height": {
+                "value": 2.1058,
+                "unit": "m",
+                "ci_lower": 2.0923,
+                "ci_upper": 2.1194,
+                "confidence_level": 0.95,
+                "standard_error": 0.0069
+              },
+              "connected_room_id": null,
+              "center_world_2d": [
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "wall_id": "LIV_W4",
+          "start_point": [
+            -0.5,
+            4.88
+          ],
+          "end_point": [
+            -0.5,
+            0.0
+          ],
+          "length": {
+            "value": 4.8685,
+            "unit": "m",
+            "ci_lower": 4.8324,
+            "ci_upper": 4.9046,
+            "confidence_level": 0.95,
+            "standard_error": 0.0184
+          },
+          "height": {
+            "value": 3.0565,
+            "unit": "m",
+            "ci_lower": 3.0404,
+            "ci_upper": 3.0726,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            1.0,
+            0.0
+          ],
+          "surface_area": {
+            "value": 14.8807,
+            "unit": "m2",
+            "ci_lower": 14.6474,
+            "ci_upper": 15.114,
+            "confidence_level": 0.95,
+            "standard_error": 0.119
+          },
+          "openings": []
+        }
+      ],
+      "openings": [
+        {
+          "opening_id": "OP_LIV_ENTRY",
+          "type": "door",
+          "wall_id": "LIV_W3",
+          "start_pos": 1.2,
+          "width": {
+            "value": 0.8602,
+            "unit": "m",
+            "ci_lower": 0.8425,
+            "ci_upper": 0.8778,
+            "confidence_level": 0.95,
+            "standard_error": 0.009
+          },
+          "height": {
+            "value": 2.1058,
+            "unit": "m",
+            "ci_lower": 2.0923,
+            "ci_upper": 2.1194,
+            "confidence_level": 0.95,
+            "standard_error": 0.0069
+          },
+          "connected_room_id": null,
+          "center_world_2d": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "opening_id": "OP_LIV_WINDOW",
+          "type": "window",
+          "wall_id": "LIV_W1",
+          "start_pos": 0.95,
+          "width": {
+            "value": 1.608,
+            "unit": "m",
+            "ci_lower": 1.588,
+            "ci_upper": 1.628,
+            "confidence_level": 0.95,
+            "standard_error": 0.0102
+          },
+          "height": {
+            "value": 1.3983,
+            "unit": "m",
+            "ci_lower": 1.3862,
+            "ci_upper": 1.4104,
+            "confidence_level": 0.95,
+            "standard_error": 0.0062
+          },
+          "connected_room_id": null,
+          "center_world_2d": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "opening_id": "OP_LIV_PASSAGE",
+          "type": "passage",
+          "wall_id": "LIV_W2",
+          "start_pos": 2.4,
+          "width": {
+            "value": 1.0947,
+            "unit": "m",
+            "ci_lower": 1.0764,
+            "ci_upper": 1.113,
+            "confidence_level": 0.95,
+            "standard_error": 0.0093
+          },
+          "height": {
+            "value": 2.1011,
+            "unit": "m",
+            "ci_lower": 2.0876,
+            "ci_upper": 2.1147,
+            "confidence_level": 0.95,
+            "standard_error": 0.0069
+          },
+          "connected_room_id": null,
+          "center_world_2d": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "polygon_2d": [
+        [
+          -0.5,
+          0.0
+        ],
+        [
+          3.02,
+          0.0
+        ],
+        [
+          3.02,
+          4.88
+        ],
+        [
+          -0.5,
+          4.88
+        ]
+      ],
+      "damage_regions": [
+        {
+          "damage_id": "DMG_01",
+          "surface_id": "LIV_W2",
+          "damage_class": "water_damage",
+          "extent_width": {
+            "value": 1.25,
+            "unit": "m",
+            "ci_lower": 1.2313,
+            "ci_upper": 1.2687,
+            "confidence_level": 0.95,
+            "standard_error": 0.0096
+          },
+          "extent_height": {
+            "value": 0.45,
+            "unit": "m",
+            "ci_lower": 0.4391,
+            "ci_upper": 0.4609,
+            "confidence_level": 0.95,
+            "standard_error": 0.0056
+          },
+          "surface_area": {
+            "value": 0.5625,
+            "unit": "m2",
+            "ci_lower": 0.5537,
+            "ci_upper": 0.5713,
+            "confidence_level": 0.95,
+            "standard_error": 0.0045
+          },
+          "confidence": 0.96,
+          "severity": "moderate",
+          "bounding_box_3d": [
+            0.0,
+            0.0,
+            0.0,
+            1.25,
+            0.45,
+            0.1
+          ],
+          "description": "Water damage detected on surface LIV_W2 (1.25m x 0.45m)"
+        },
+        {
+          "damage_id": "DMG_02",
+          "surface_id": "LIV_W1",
+          "damage_class": "structural_crack",
+          "extent_width": {
+            "value": 0.95,
+            "unit": "m",
+            "ci_lower": 0.9321,
+            "ci_upper": 0.9679,
+            "confidence_level": 0.95,
+            "standard_error": 0.0091
+          },
+          "extent_height": {
+            "value": 0.05,
+            "unit": "m",
+            "ci_lower": 0.0392,
+            "ci_upper": 0.0608,
+            "confidence_level": 0.95,
+            "standard_error": 0.0055
+          },
+          "surface_area": {
+            "value": 0.0475,
+            "unit": "m2",
+            "ci_lower": 0.0468,
+            "ci_upper": 0.0482,
+            "confidence_level": 0.95,
+            "standard_error": 0.0004
+          },
+          "confidence": 0.96,
+          "severity": "minor",
+          "bounding_box_3d": [
+            0.0,
+            0.0,
+            0.0,
+            0.95,
+            0.05,
+            0.1
+          ],
+          "description": "Structural crack detected on surface LIV_W1 (0.95m x 0.05m)"
+        }
+      ],
+      "concealed_flags": [
+        {
+          "flag_id": "CONF_living_room_DMG_01_01",
+          "surface_id": "LIV_W2",
+          "rule_id": "RULE_CONCEALED_WTR_01",
+          "rule_name": "Wall Cavity Trapped Moisture & Insulation Saturation",
+          "risk_score": 0.92,
+          "trigger_condition": "Water damage detected on lower 0.6m of drywall surface",
+          "evidence": "Moisture staining spanning 1.25m along baseboard of LIV_W2. Wicking height: 0.45m.",
+          "recommended_action": "Perform 2-foot flood cut, inspect wall cavity and bottom plate, replace wet insulation."
+        },
+        {
+          "flag_id": "CONF_living_room_DMG_01_02",
+          "surface_id": "LIV_W2",
+          "rule_id": "RULE_PLUMB_SUPPLY_02",
+          "rule_name": "Concealed In-Wall Supply/Drain Stack Compromise",
+          "risk_score": 0.85,
+          "trigger_condition": "Moisture adjacent to kitchen/bath plumbing chase",
+          "evidence": "Damage pattern concentrates along vertical pipe riser chase in partition.",
+          "recommended_action": "Execute acoustic/thermal pipe leak isolation and inspect riser fittings."
+        },
+        {
+          "flag_id": "CONF_living_room_DMG_02_03",
+          "surface_id": "LIV_W1",
+          "rule_id": "RULE_STRUCT_CORNER_03",
+          "rule_name": "Differential Structural Settlement & Framing Deflection",
+          "risk_score": 0.79,
+          "trigger_condition": "Diagonal stepped shear fracture adjacent to corner/header opening",
+          "evidence": "Continuous fracture propagating 0.95m at upper corner junction of LIV_W1.",
+          "recommended_action": "Conduct foundation level survey, check header bearing, and perform structural epoxy stitch."
+        }
+      ],
+      "scope_items": [
+        {
+          "item_id": "SCOPE_living_room_DMG_01_01",
+          "surface_id": "LIV_W2",
+          "code": "BASEBOARD_REPLACE",
+          "description": "Remove and replace primed baseboard moulding",
+          "quantity": {
+            "value": 1.85,
+            "unit": "m",
+            "ci_lower": 1.8313,
+            "ci_upper": 1.8687,
+            "confidence_level": 0.95,
+            "standard_error": 0.0095
+          },
+          "unit": "m",
+          "unit_price_usd": 28.5,
+          "total_price_usd": 52.73
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_01_02",
+          "surface_id": "LIV_W2",
+          "code": "DRYWALL_CUT",
+          "description": "Flood-cut drywall 2ft and dispose contaminated materials",
+          "quantity": {
+            "value": 1.85,
+            "unit": "m",
+            "ci_lower": 1.8313,
+            "ci_upper": 1.8687,
+            "confidence_level": 0.95,
+            "standard_error": 0.0095
+          },
+          "unit": "m",
+          "unit_price_usd": 38.0,
+          "total_price_usd": 70.3
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_01_03",
+          "surface_id": "LIV_W2",
+          "code": "INSULATION_REPLACE",
+          "description": "Remove wet fiberglass batt insulation and replace with R-13",
+          "quantity": {
+            "value": 1.1285,
+            "unit": "m2",
+            "ci_lower": 1.1108,
+            "ci_upper": 1.1462,
+            "confidence_level": 0.95,
+            "standard_error": 0.009
+          },
+          "unit": "m2",
+          "unit_price_usd": 26.0,
+          "total_price_usd": 29.34
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_01_04",
+          "surface_id": "LIV_W2",
+          "code": "ANTIMICROBIAL",
+          "description": "Apply EPA-registered botanical antimicrobial spray",
+          "quantity": {
+            "value": 1.1285,
+            "unit": "m2",
+            "ci_lower": 1.1108,
+            "ci_upper": 1.1462,
+            "confidence_level": 0.95,
+            "standard_error": 0.009
+          },
+          "unit": "m2",
+          "unit_price_usd": 14.5,
+          "total_price_usd": 16.36
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_01_05",
+          "surface_id": "LIV_W2",
+          "code": "DRYWALL_REPAIR",
+          "description": "Hang, tape, float and finish 5/8\" drywall",
+          "quantity": {
+            "value": 1.1285,
+            "unit": "m2",
+            "ci_lower": 1.1108,
+            "ci_upper": 1.1462,
+            "confidence_level": 0.95,
+            "standard_error": 0.009
+          },
+          "unit": "m2",
+          "unit_price_usd": 68.0,
+          "total_price_usd": 76.74
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_01_06",
+          "surface_id": "LIV_W2",
+          "code": "PAINT_STAIN_BLOCK",
+          "description": "Apply shellac stain-blocking primer and two coats latex paint",
+          "quantity": {
+            "value": 4.0,
+            "unit": "m2",
+            "ci_lower": 3.9373,
+            "ci_upper": 4.0627,
+            "confidence_level": 0.95,
+            "standard_error": 0.032
+          },
+          "unit": "m2",
+          "unit_price_usd": 32.0,
+          "total_price_usd": 128.0
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_02_07",
+          "surface_id": "LIV_W1",
+          "code": "CRACK_EPOXY_STITCH",
+          "description": "Clean, V-groove, epoxy inject and carbon fiber stitch structural crack",
+          "quantity": {
+            "value": 0.95,
+            "unit": "m",
+            "ci_lower": 0.9348,
+            "ci_upper": 0.9652,
+            "confidence_level": 0.95,
+            "standard_error": 0.0077
+          },
+          "unit": "m",
+          "unit_price_usd": 95.0,
+          "total_price_usd": 90.25
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_02_08",
+          "surface_id": "LIV_W1",
+          "code": "PAINT_STAIN_BLOCK",
+          "description": "Spot prime and blend paint over repaired fracture",
+          "quantity": {
+            "value": 2.5,
+            "unit": "m2",
+            "ci_lower": 2.4608,
+            "ci_upper": 2.5392,
+            "confidence_level": 0.95,
+            "standard_error": 0.02
+          },
+          "unit": "m2",
+          "unit_price_usd": 32.0,
+          "total_price_usd": 80.0
+        }
+      ]
+    },
+    {
+      "room_id": "bathroom",
+      "name": "Full Bathroom",
+      "room_type": "bathroom",
+      "floor_area": {
+        "value": 4.07,
+        "unit": "m2",
+        "ci_lower": 4.0062,
+        "ci_upper": 4.1338,
+        "confidence_level": 0.95,
+        "standard_error": 0.0326
+      },
+      "ceiling_height": {
+        "value": 2.8492,
+        "unit": "m",
+        "ci_lower": 2.8337,
+        "ci_upper": 2.8647,
+        "confidence_level": 0.95,
+        "standard_error": 0.0079
+      },
+      "walls": [
+        {
+          "wall_id": "BATH_W1",
+          "start_point": [
+            -2.7,
+            7.0
+          ],
+          "end_point": [
+            -0.5,
+            7.0
+          ],
+          "length": {
+            "value": 2.1971,
+            "unit": "m",
+            "ci_lower": 2.1767,
+            "ci_upper": 2.2175,
+            "confidence_level": 0.95,
+            "standard_error": 0.0104
+          },
+          "height": {
+            "value": 2.8492,
+            "unit": "m",
+            "ci_lower": 2.8337,
+            "ci_upper": 2.8647,
+            "confidence_level": 0.95,
+            "standard_error": 0.0079
+          },
+          "normal": [
+            -0.0,
+            1.0
+          ],
+          "surface_area": {
+            "value": 6.2599,
+            "unit": "m2",
+            "ci_lower": 6.1617,
+            "ci_upper": 6.358,
+            "confidence_level": 0.95,
+            "standard_error": 0.0501
+          },
+          "openings": []
+        },
+        {
+          "wall_id": "BATH_W2",
+          "start_point": [
+            -0.5,
+            7.0
+          ],
+          "end_point": [
+            -0.5,
+            8.85
+          ],
+          "length": {
+            "value": 1.85,
+            "unit": "m",
+            "ci_lower": 1.8313,
+            "ci_upper": 1.8686,
+            "confidence_level": 0.95,
+            "standard_error": 0.0095
+          },
+          "height": {
+            "value": 2.8492,
+            "unit": "m",
+            "ci_lower": 2.8337,
+            "ci_upper": 2.8647,
+            "confidence_level": 0.95,
+            "standard_error": 0.0079
+          },
+          "normal": [
+            -1.0,
+            0.0
+          ],
+          "surface_area": {
+            "value": 5.2709,
+            "unit": "m2",
+            "ci_lower": 5.1882,
+            "ci_upper": 5.3535,
+            "confidence_level": 0.95,
+            "standard_error": 0.0422
+          },
+          "openings": [
+            {
+              "opening_id": "OP_BATH_DOOR",
+              "type": "door",
+              "wall_id": "BATH_W2",
+              "start_pos": 0.55,
+              "width": {
+                "value": 0.7482,
+                "unit": "m",
+                "ci_lower": 0.7308,
+                "ci_upper": 0.7657,
+                "confidence_level": 0.95,
+                "standard_error": 0.0089
+              },
+              "height": {
+                "value": 2.0452,
+                "unit": "m",
+                "ci_lower": 2.0318,
+                "ci_upper": 2.0586,
+                "confidence_level": 0.95,
+                "standard_error": 0.0069
+              },
+              "connected_room_id": null,
+              "center_world_2d": [
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "wall_id": "BATH_W3",
+          "start_point": [
+            -0.5,
+            8.85
+          ],
+          "end_point": [
+            -2.7,
+            8.85
+          ],
+          "length": {
+            "value": 2.1995,
+            "unit": "m",
+            "ci_lower": 2.1791,
+            "ci_upper": 2.2199,
+            "confidence_level": 0.95,
+            "standard_error": 0.0104
+          },
+          "height": {
+            "value": 2.8492,
+            "unit": "m",
+            "ci_lower": 2.8337,
+            "ci_upper": 2.8647,
+            "confidence_level": 0.95,
+            "standard_error": 0.0079
+          },
+          "normal": [
+            -0.0,
+            -1.0
+          ],
+          "surface_area": {
+            "value": 6.2668,
+            "unit": "m2",
+            "ci_lower": 6.1686,
+            "ci_upper": 6.3651,
+            "confidence_level": 0.95,
+            "standard_error": 0.0501
+          },
+          "openings": []
+        },
+        {
+          "wall_id": "BATH_W4",
+          "start_point": [
+            -2.7,
+            8.85
+          ],
+          "end_point": [
+            -2.7,
+            7.0
+          ],
+          "length": {
+            "value": 1.8586,
+            "unit": "m",
+            "ci_lower": 1.8399,
+            "ci_upper": 1.8773,
+            "confidence_level": 0.95,
+            "standard_error": 0.0096
+          },
+          "height": {
+            "value": 2.8492,
+            "unit": "m",
+            "ci_lower": 2.8337,
+            "ci_upper": 2.8647,
+            "confidence_level": 0.95,
+            "standard_error": 0.0079
+          },
+          "normal": [
+            1.0,
+            0.0
+          ],
+          "surface_area": {
+            "value": 5.2955,
+            "unit": "m2",
+            "ci_lower": 5.2124,
+            "ci_upper": 5.3785,
+            "confidence_level": 0.95,
+            "standard_error": 0.0424
+          },
+          "openings": []
+        }
+      ],
+      "openings": [
+        {
+          "opening_id": "OP_BATH_DOOR",
+          "type": "door",
+          "wall_id": "BATH_W2",
+          "start_pos": 0.55,
+          "width": {
+            "value": 0.7482,
+            "unit": "m",
+            "ci_lower": 0.7308,
+            "ci_upper": 0.7657,
+            "confidence_level": 0.95,
+            "standard_error": 0.0089
+          },
+          "height": {
+            "value": 2.0452,
+            "unit": "m",
+            "ci_lower": 2.0318,
+            "ci_upper": 2.0586,
+            "confidence_level": 0.95,
+            "standard_error": 0.0069
+          },
+          "connected_room_id": null,
+          "center_world_2d": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "polygon_2d": [
+        [
+          -2.7,
+          7.0
+        ],
+        [
+          -0.5,
+          7.0
+        ],
+        [
+          -0.5,
+          8.85
+        ],
+        [
+          -2.7,
+          8.85
+        ]
+      ],
+      "damage_regions": [],
+      "concealed_flags": [],
+      "scope_items": []
+    },
+    {
+      "room_id": "dining_room",
+      "name": "Dining Room",
+      "room_type": "dining_room",
+      "floor_area": {
+        "value": 11.315,
+        "unit": "m2",
+        "ci_lower": 11.1376,
+        "ci_upper": 11.4924,
+        "confidence_level": 0.95,
+        "standard_error": 0.0905
+      },
+      "ceiling_height": {
+        "value": 3.0595,
+        "unit": "m",
+        "ci_lower": 3.0434,
+        "ci_upper": 3.0756,
+        "confidence_level": 0.95,
+        "standard_error": 0.0082
+      },
+      "walls": [
+        {
+          "wall_id": "DIN_W1",
+          "start_point": [
+            2.4,
+            5.75
+          ],
+          "end_point": [
+            6.05,
+            5.75
+          ],
+          "length": {
+            "value": 3.6431,
+            "unit": "m",
+            "ci_lower": 3.6146,
+            "ci_upper": 3.6716,
+            "confidence_level": 0.95,
+            "standard_error": 0.0145
+          },
+          "height": {
+            "value": 3.0595,
+            "unit": "m",
+            "ci_lower": 3.0434,
+            "ci_upper": 3.0756,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            -0.0,
+            1.0
+          ],
+          "surface_area": {
+            "value": 11.146,
+            "unit": "m2",
+            "ci_lower": 10.9712,
+            "ci_upper": 11.3207,
+            "confidence_level": 0.95,
+            "standard_error": 0.0892
+          },
+          "openings": []
+        },
+        {
+          "wall_id": "DIN_W2",
+          "start_point": [
+            6.05,
+            5.75
+          ],
+          "end_point": [
+            6.05,
+            8.85
+          ],
+          "length": {
+            "value": 3.1024,
+            "unit": "m",
+            "ci_lower": 3.077,
+            "ci_upper": 3.1277,
+            "confidence_level": 0.95,
+            "standard_error": 0.0129
+          },
+          "height": {
+            "value": 3.0595,
+            "unit": "m",
+            "ci_lower": 3.0434,
+            "ci_upper": 3.0756,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            -1.0,
+            0.0
+          ],
+          "surface_area": {
+            "value": 9.4917,
+            "unit": "m2",
+            "ci_lower": 9.3428,
+            "ci_upper": 9.6405,
+            "confidence_level": 0.95,
+            "standard_error": 0.0759
+          },
+          "openings": [
+            {
+              "opening_id": "OP_DIN_WINDOW",
+              "type": "window",
+              "wall_id": "DIN_W2",
+              "start_pos": 0.85,
+              "width": {
+                "value": 1.4057,
+                "unit": "m",
+                "ci_lower": 1.3864,
+                "ci_upper": 1.4249,
+                "confidence_level": 0.95,
+                "standard_error": 0.0098
+              },
+              "height": {
+                "value": 1.4133,
+                "unit": "m",
+                "ci_lower": 1.4011,
+                "ci_upper": 1.4254,
+                "confidence_level": 0.95,
+                "standard_error": 0.0062
+              },
+              "connected_room_id": null,
+              "center_world_2d": [
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "wall_id": "DIN_W3",
+          "start_point": [
+            6.05,
+            8.85
+          ],
+          "end_point": [
+            2.4,
+            8.85
+          ],
+          "length": {
+            "value": 3.6486,
+            "unit": "m",
+            "ci_lower": 3.6201,
+            "ci_upper": 3.6772,
+            "confidence_level": 0.95,
+            "standard_error": 0.0146
+          },
+          "height": {
+            "value": 3.0595,
+            "unit": "m",
+            "ci_lower": 3.0434,
+            "ci_upper": 3.0756,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            -0.0,
+            -1.0
+          ],
+          "surface_area": {
+            "value": 11.163,
+            "unit": "m2",
+            "ci_lower": 10.9879,
+            "ci_upper": 11.338,
+            "confidence_level": 0.95,
+            "standard_error": 0.0893
+          },
+          "openings": []
+        },
+        {
+          "wall_id": "DIN_W4",
+          "start_point": [
+            2.4,
+            8.85
+          ],
+          "end_point": [
+            2.4,
+            5.75
+          ],
+          "length": {
+            "value": 3.0984,
+            "unit": "m",
+            "ci_lower": 3.0731,
+            "ci_upper": 3.1237,
+            "confidence_level": 0.95,
+            "standard_error": 0.0129
+          },
+          "height": {
+            "value": 3.0595,
+            "unit": "m",
+            "ci_lower": 3.0434,
+            "ci_upper": 3.0756,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            1.0,
+            0.0
+          ],
+          "surface_area": {
+            "value": 9.4795,
+            "unit": "m2",
+            "ci_lower": 9.3309,
+            "ci_upper": 9.6281,
+            "confidence_level": 0.95,
+            "standard_error": 0.0758
+          },
+          "openings": [
+            {
+              "opening_id": "OP_DIN_ENTRY",
+              "type": "passage",
+              "wall_id": "DIN_W4",
+              "start_pos": 1.1,
+              "width": {
+                "value": 0.8955,
+                "unit": "m",
+                "ci_lower": 0.8778,
+                "ci_upper": 0.9133,
+                "confidence_level": 0.95,
+                "standard_error": 0.0091
+              },
+              "height": {
+                "value": 2.0983,
+                "unit": "m",
+                "ci_lower": 2.0848,
+                "ci_upper": 2.1119,
+                "confidence_level": 0.95,
+                "standard_error": 0.0069
+              },
+              "connected_room_id": null,
+              "center_world_2d": [
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        }
+      ],
+      "openings": [
+        {
+          "opening_id": "OP_DIN_ENTRY",
+          "type": "passage",
+          "wall_id": "DIN_W4",
+          "start_pos": 1.1,
+          "width": {
+            "value": 0.8955,
+            "unit": "m",
+            "ci_lower": 0.8778,
+            "ci_upper": 0.9133,
+            "confidence_level": 0.95,
+            "standard_error": 0.0091
+          },
+          "height": {
+            "value": 2.0983,
+            "unit": "m",
+            "ci_lower": 2.0848,
+            "ci_upper": 2.1119,
+            "confidence_level": 0.95,
+            "standard_error": 0.0069
+          },
+          "connected_room_id": null,
+          "center_world_2d": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "opening_id": "OP_DIN_WINDOW",
+          "type": "window",
+          "wall_id": "DIN_W2",
+          "start_pos": 0.85,
+          "width": {
+            "value": 1.4057,
+            "unit": "m",
+            "ci_lower": 1.3864,
+            "ci_upper": 1.4249,
+            "confidence_level": 0.95,
+            "standard_error": 0.0098
+          },
+          "height": {
+            "value": 1.4133,
+            "unit": "m",
+            "ci_lower": 1.4011,
+            "ci_upper": 1.4254,
+            "confidence_level": 0.95,
+            "standard_error": 0.0062
+          },
+          "connected_room_id": null,
+          "center_world_2d": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "polygon_2d": [
+        [
+          2.4,
+          5.75
+        ],
+        [
+          6.05,
+          5.75
+        ],
+        [
+          6.05,
+          8.85
+        ],
+        [
+          2.4,
+          8.85
+        ]
+      ],
+      "damage_regions": [],
+      "concealed_flags": [],
+      "scope_items": []
+    },
+    {
+      "room_id": "hallway_connector",
+      "name": "Central Hallway & Connector",
+      "room_type": "hallway",
+      "floor_area": {
+        "value": 5.25,
+        "unit": "m2",
+        "ci_lower": 5.1677,
+        "ci_upper": 5.3323,
+        "confidence_level": 0.95,
+        "standard_error": 0.042
+      },
+      "ceiling_height": {
+        "value": 3.061,
+        "unit": "m",
+        "ci_lower": 3.0448,
+        "ci_upper": 3.0771,
+        "confidence_level": 0.95,
+        "standard_error": 0.0082
+      },
+      "walls": [
+        {
+          "wall_id": "HALL_W1",
+          "start_point": [
+            -0.5,
+            4.88
+          ],
+          "end_point": [
+            0.75,
+            4.88
+          ],
+          "length": {
+            "value": 1.2574,
+            "unit": "m",
+            "ci_lower": 1.2412,
+            "ci_upper": 1.2736,
+            "confidence_level": 0.95,
+            "standard_error": 0.0083
+          },
+          "height": {
+            "value": 3.061,
+            "unit": "m",
+            "ci_lower": 3.0448,
+            "ci_upper": 3.0771,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            -0.0,
+            1.0
+          ],
+          "surface_area": {
+            "value": 3.8488,
+            "unit": "m2",
+            "ci_lower": 3.7885,
+            "ci_upper": 3.9092,
+            "confidence_level": 0.95,
+            "standard_error": 0.0308
+          },
+          "openings": []
+        },
+        {
+          "wall_id": "HALL_W2",
+          "start_point": [
+            0.75,
+            4.88
+          ],
+          "end_point": [
+            0.75,
+            9.08
+          ],
+          "length": {
+            "value": 4.2002,
+            "unit": "m",
+            "ci_lower": 4.1683,
+            "ci_upper": 4.2322,
+            "confidence_level": 0.95,
+            "standard_error": 0.0163
+          },
+          "height": {
+            "value": 3.061,
+            "unit": "m",
+            "ci_lower": 3.0448,
+            "ci_upper": 3.0771,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            -1.0,
+            0.0
+          ],
+          "surface_area": {
+            "value": 12.8569,
+            "unit": "m2",
+            "ci_lower": 12.6553,
+            "ci_upper": 13.0585,
+            "confidence_level": 0.95,
+            "standard_error": 0.1029
+          },
+          "openings": [
+            {
+              "opening_id": "OP_HALL_STAIR",
+              "type": "passage",
+              "wall_id": "HALL_W2",
+              "start_pos": 1.8,
+              "width": {
+                "value": 1.0351,
+                "unit": "m",
+                "ci_lower": 1.017,
+                "ci_upper": 1.0532,
+                "confidence_level": 0.95,
+                "standard_error": 0.0092
+              },
+              "height": {
+                "value": 2.099,
+                "unit": "m",
+                "ci_lower": 2.0854,
+                "ci_upper": 2.1125,
+                "confidence_level": 0.95,
+                "standard_error": 0.0069
+              },
+              "connected_room_id": null,
+              "center_world_2d": [
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "wall_id": "HALL_W3",
+          "start_point": [
+            0.75,
+            9.08
+          ],
+          "end_point": [
+            -0.5,
+            9.08
+          ],
+          "length": {
+            "value": 1.252,
+            "unit": "m",
+            "ci_lower": 1.2358,
+            "ci_upper": 1.2682,
+            "confidence_level": 0.95,
+            "standard_error": 0.0083
+          },
+          "height": {
+            "value": 3.061,
+            "unit": "m",
+            "ci_lower": 3.0448,
+            "ci_upper": 3.0771,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            -0.0,
+            -1.0
+          ],
+          "surface_area": {
+            "value": 3.8325,
+            "unit": "m2",
+            "ci_lower": 3.7724,
+            "ci_upper": 3.8925,
+            "confidence_level": 0.95,
+            "standard_error": 0.0307
+          },
+          "openings": []
+        },
+        {
+          "wall_id": "HALL_W4",
+          "start_point": [
+            -0.5,
+            9.08
+          ],
+          "end_point": [
+            -0.5,
+            4.88
+          ],
+          "length": {
+            "value": 4.197,
+            "unit": "m",
+            "ci_lower": 4.1651,
+            "ci_upper": 4.2289,
+            "confidence_level": 0.95,
+            "standard_error": 0.0163
+          },
+          "height": {
+            "value": 3.061,
+            "unit": "m",
+            "ci_lower": 3.0448,
+            "ci_upper": 3.0771,
+            "confidence_level": 0.95,
+            "standard_error": 0.0082
+          },
+          "normal": [
+            1.0,
+            0.0
+          ],
+          "surface_area": {
+            "value": 12.847,
+            "unit": "m2",
+            "ci_lower": 12.6456,
+            "ci_upper": 13.0485,
+            "confidence_level": 0.95,
+            "standard_error": 0.1028
+          },
+          "openings": []
+        }
+      ],
+      "openings": [
+        {
+          "opening_id": "OP_HALL_STAIR",
+          "type": "passage",
+          "wall_id": "HALL_W2",
+          "start_pos": 1.8,
+          "width": {
+            "value": 1.0351,
+            "unit": "m",
+            "ci_lower": 1.017,
+            "ci_upper": 1.0532,
+            "confidence_level": 0.95,
+            "standard_error": 0.0092
+          },
+          "height": {
+            "value": 2.099,
+            "unit": "m",
+            "ci_lower": 2.0854,
+            "ci_upper": 2.1125,
+            "confidence_level": 0.95,
+            "standard_error": 0.0069
+          },
+          "connected_room_id": null,
+          "center_world_2d": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "polygon_2d": [
+        [
+          -0.5,
+          4.88
+        ],
+        [
+          0.75,
+          4.88
+        ],
+        [
+          0.75,
+          9.08
+        ],
+        [
+          -0.5,
+          9.08
+        ]
+      ],
+      "damage_regions": [],
+      "concealed_flags": [],
+      "scope_items": []
+    }
+  ],
+  "total_floor_area": {
+    "value": 37.8126,
+    "unit": "m2",
+    "ci_lower": 37.2197,
+    "ci_upper": 38.4055,
+    "confidence_level": 0.95,
+    "standard_error": 0.3025
+  },
+  "total_walls_count": 16,
+  "total_openings_count": 7,
+  "adjacency_graph": [
+    {
+      "from_room": "living_room",
+      "to_room": "hallway_connector",
+      "connection_type": "doorway_entry",
+      "width_m": 0.85
+    },
+    {
+      "from_room": "dining_room",
+      "to_room": "hallway_connector",
+      "connection_type": "passage_entry",
+      "width_m": 0.9
+    },
+    {
+      "from_room": "bathroom",
+      "to_room": "hallway_connector",
+      "connection_type": "doorway_bath",
+      "width_m": 0.75
+    }
+  ],
+  "drift_correction_applied": true,
+  "drift_metrics": {
+    "drift_correction_enabled": true,
+    "trajectory_length_m": 14.488,
+    "raw_loop_closure_error_m": 3.1791,
+    "raw_drift_rate_mm_per_m": 219.42,
+    "corrected_loop_closure_error_m": 0.0,
+    "method": "Plane-Anchored Pose Graph with Gravity Alignment"
+  },
+  "remediation_total_usd": 543.72,
+  "metadata": {
+    "overlap_detected": false,
+    "rooms_count": 4,
+    "connector_present": true,
+    "stitching_mode": "Topological Opening-Snapped Graph Optimization"
+  }
+}

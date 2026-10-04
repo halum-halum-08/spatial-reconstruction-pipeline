@@ -1,12 +1,12 @@
 """
-Multi-Room Plan Stitcher & Global Adjacency Alignment Engine.
-Ensures correct room adjacency, non-overlap, and opening snapping across all tiers.
+Autonomous Multi-Room Plan Stitcher.
+Dynamically computes room adjacency graph, opening-to-opening port alignment,
+and non-overlap verification across arbitrary room configurations.
 """
 
-import json
 from typing import List, Dict, Any, Tuple
 import numpy as np
-from shapely.geometry import Polygon
+from shapely.geometry import Polygon, Point
 from pipeline.schema import PropertyPlan, RoomPlan, MeasurementWithCI
 from pipeline.calibration import CalibrationEngine
 
@@ -16,6 +16,45 @@ class MultiRoomStitcher:
 
     def __init__(self, calibration: CalibrationEngine):
         self.cal = calibration
+
+    def compute_dynamic_adjacency(self, rooms: List[RoomPlan]) -> List[Dict[str, Any]]:
+        """
+        Dynamically discovers adjoining room pairs by testing spatial proximity
+        of wall boundaries and inter-room opening ports.
+        """
+        edges = []
+        n = len(rooms)
+        for i in range(n):
+            for j in range(i + 1, n):
+                r1, r2 = rooms[i], rooms[j]
+                poly1 = Polygon(r1.polygon_2d) if len(r1.polygon_2d) >= 3 else None
+                poly2 = Polygon(r2.polygon_2d) if len(r2.polygon_2d) >= 3 else None
+
+                if poly1 is None or poly2 is None:
+                    continue
+
+                # Distance between room boundaries
+                dist = poly1.distance(poly2)
+
+                # Check if rooms share a doorway or are immediately contiguous (dist < 0.35m)
+                connected_by_door = False
+                door_w = 0.85
+                for op1 in r1.openings:
+                    if op1.connected_room_id == r2.room_id:
+                        connected_by_door = True
+                        door_w = op1.width.value
+                        break
+
+                if dist < 0.35 or connected_by_door:
+                    edges.append({
+                        "from_room": r1.room_id,
+                        "to_room": r2.room_id,
+                        "connection_type": "doorway_connection" if connected_by_door else "contiguous_boundary",
+                        "separation_distance_m": round(float(dist), 3),
+                        "portal_width_m": round(float(door_w), 3)
+                    })
+
+        return edges
 
     def stitch_property(
         self,
@@ -27,32 +66,27 @@ class MultiRoomStitcher:
     ) -> PropertyPlan:
         """
         Assembles room plans into a global coordinate frame, verifies non-overlap,
-        and constructs the final PropertyPlan.
+        and constructs the final PropertyPlan dynamically.
         """
-        # Adjacency graph definition
-        # Living Room <-> Hallway Connector
-        # Dining Room <-> Hallway Connector
-        # Bathroom    <-> Hallway Connector
-        adjacency_edges = [
-            {"from_room": "living_room", "to_room": "hallway_connector", "connection_type": "doorway_entry", "width_m": 0.85},
-            {"from_room": "dining_room", "to_room": "hallway_connector", "connection_type": "passage_entry", "width_m": 0.90},
-            {"from_room": "bathroom", "to_room": "hallway_connector", "connection_type": "doorway_bath", "width_m": 0.75}
-        ]
+        # 1. Dynamically compute inter-room adjacency graph
+        adjacency_edges = self.compute_dynamic_adjacency(rooms)
 
-        # Verify room non-overlap via Shapely
+        # 2. Verify room non-overlap via Shapely
         polys = {}
         for r in rooms:
             if len(r.polygon_2d) >= 3:
                 polys[r.room_id] = Polygon(r.polygon_2d)
 
         overlap_detected = False
+        overlap_area = 0.0
         room_ids = list(polys.keys())
         for i in range(len(room_ids)):
             for j in range(i + 1, len(room_ids)):
                 r1, r2 = room_ids[i], room_ids[j]
-                inter_area = polys[r1].intersection(polys[r2]).area
-                if inter_area > 0.05: # more than 500 cm2 overlap
+                inter = polys[r1].intersection(polys[r2])
+                if inter.area > 0.02: # more than 200 cm2 overlap threshold
                     overlap_detected = True
+                    overlap_area += inter.area
 
         total_interior_area = sum(r.floor_area.value for r in rooms)
         m_tot_area = self.cal.measure_area(total_interior_area)
@@ -79,8 +113,8 @@ class MultiRoomStitcher:
             remediation_total_usd=round(remediation_sum, 2),
             metadata={
                 "overlap_detected": overlap_detected,
+                "overlap_area_m2": round(float(overlap_area), 4),
                 "rooms_count": len(rooms),
-                "connector_present": any("hallway" in r.room_id for r in rooms),
-                "stitching_mode": "Topological Opening-Snapped Graph Optimization"
+                "stitching_mode": "Dynamic Boundary Proximity & Topological Opening Graph"
             }
         )

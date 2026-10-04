@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 516 547" width="100%" height="100%">
+<defs>
+  <style>
+    .room-poly { stroke: none; fill-opacity: 0.85; transition: fill 0.3s; }
+    .wall-line { stroke: #2C3E50; stroke-width: 6; stroke-linecap: round; }
+    .opening-door { stroke: #E67E22; stroke-width: 5; stroke-dasharray: 4,4; }
+    .opening-win { stroke: #2980B9; stroke-width: 4; }
+    .room-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: bold; fill: #2C3E50; text-anchor: middle; }
+    .dim-label { font-family: monospace; font-size: 11px; fill: #7F8C8D; text-anchor: middle; }
+    .damage-marker { fill: #E74C3C; stroke: #C0392B; stroke-width: 2; cursor: pointer; }
+  </style>
+</defs>
+<rect width="516" height="547" fill="#FAFAFA" />
+<polygon class="room-poly" points="79.99278629255963,80.01460280126241 436.4618644597144,80.01460280126241 436.4618644597144,467.06471259829004 79.99278629255963,467.06471259829004" fill="#EBF3FB" id="poly-living_room"/>
+<line class="wall-line" x1="80.0" y1="80.0" x2="436.5" y2="80.0" />
+<text class="dim-label" x="258.2" y="94.0">4.46m (±1.7cm)</text>
+<line class="opening-win" x1="156.0" y1="80.0" x2="283.2" y2="80.0" />
+<line class="wall-line" x1="436.5" y1="80.0" x2="436.5" y2="467.0" />
+<text class="dim-label" x="422.5" y="273.5">4.84m (±1.8cm)</text>
+<line class="opening-door" x1="436.5" y1="272.0" x2="436.5" y2="360.2" />
+<line class="wall-line" x1="436.5" y1="467.0" x2="80.0" y2="467.0" />
+<text class="dim-label" x="258.2" y="453.0">4.46m (±1.7cm)</text>
+<line class="opening-door" x1="340.5" y1="467.0" x2="271.8" y2="467.0" />
+<line class="wall-line" x1="80.0" y1="467.0" x2="80.0" y2="80.0" />
+<text class="dim-label" x="94.0" y="273.5">4.84m (±1.8cm)</text>
+<text class="room-label" x="258.2" y="273.5">Living & Kitchen Suite</text>
+<text class="dim-label" x="258.2" y="291.5">21.56 m² | H: 2.63m</text>
+<circle class="damage-marker" cx="298.2" cy="241.5" r="8" />
+<text x="310.2" y="245.5" font-size="10" font-weight="bold" fill="#C0392B">WATER_DAMAGE (1.25m)</text>
+</svg>

@@ -1,0 +1,522 @@
+{
+  "capture_id": "single_room",
+  "input_tier": "lidar",
+  "device_model": "iPhone 15 Pro Max (LiDAR Scanner)",
+  "timestamp": "2026-09-01T23:48:00Z",
+  "rooms": [
+    {
+      "room_id": "living_room",
+      "name": "Living & Kitchen Suite",
+      "room_type": "living_room",
+      "floor_area": {
+        "value": 21.558,
+        "unit": "m2",
+        "ci_lower": 21.22,
+        "ci_upper": 21.8961,
+        "confidence_level": 0.95,
+        "standard_error": 0.1725
+      },
+      "ceiling_height": {
+        "value": 2.6256,
+        "unit": "m",
+        "ci_lower": 2.6107,
+        "ci_upper": 2.6405,
+        "confidence_level": 0.95,
+        "standard_error": 0.0076
+      },
+      "walls": [
+        {
+          "wall_id": "LIVI_W1",
+          "start_point": [
+            -1.761,
+            -0.936
+          ],
+          "end_point": [
+            2.695,
+            -0.936
+          ],
+          "length": {
+            "value": 4.4559,
+            "unit": "m",
+            "ci_lower": 4.4224,
+            "ci_upper": 4.4894,
+            "confidence_level": 0.95,
+            "standard_error": 0.0171
+          },
+          "height": {
+            "value": 2.6256,
+            "unit": "m",
+            "ci_lower": 2.6107,
+            "ci_upper": 2.6405,
+            "confidence_level": 0.95,
+            "standard_error": 0.0076
+          },
+          "normal": [
+            -0.0,
+            1.0
+          ],
+          "surface_area": {
+            "value": 11.6995,
+            "unit": "m2",
+            "ci_lower": 11.516,
+            "ci_upper": 11.8829,
+            "confidence_level": 0.95,
+            "standard_error": 0.0936
+          },
+          "openings": [
+            {
+              "opening_id": "OP_LIV_WINDOW",
+              "type": "window",
+              "wall_id": "LIVI_W1",
+              "start_pos": 0.95,
+              "width": {
+                "value": 1.59,
+                "unit": "m",
+                "ci_lower": 1.5701,
+                "ci_upper": 1.6099,
+                "confidence_level": 0.95,
+                "standard_error": 0.0102
+              },
+              "height": {
+                "value": 1.4,
+                "unit": "m",
+                "ci_lower": 1.3879,
+                "ci_upper": 1.4121,
+                "confidence_level": 0.95,
+                "standard_error": 0.0062
+              },
+              "connected_room_id": null,
+              "center_world_2d": [
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "wall_id": "LIVI_W2",
+          "start_point": [
+            2.695,
+            -0.936
+          ],
+          "end_point": [
+            2.695,
+            3.902
+          ],
+          "length": {
+            "value": 4.8381,
+            "unit": "m",
+            "ci_lower": 4.8022,
+            "ci_upper": 4.874,
+            "confidence_level": 0.95,
+            "standard_error": 0.0183
+          },
+          "height": {
+            "value": 2.6256,
+            "unit": "m",
+            "ci_lower": 2.6107,
+            "ci_upper": 2.6405,
+            "confidence_level": 0.95,
+            "standard_error": 0.0076
+          },
+          "normal": [
+            -1.0,
+            0.0
+          ],
+          "surface_area": {
+            "value": 12.7032,
+            "unit": "m2",
+            "ci_lower": 12.504,
+            "ci_upper": 12.9024,
+            "confidence_level": 0.95,
+            "standard_error": 0.1016
+          },
+          "openings": [
+            {
+              "opening_id": "OP_LIV_PASSAGE",
+              "type": "passage",
+              "wall_id": "LIVI_W2",
+              "start_pos": 2.4,
+              "width": {
+                "value": 1.103,
+                "unit": "m",
+                "ci_lower": 1.0847,
+                "ci_upper": 1.1213,
+                "confidence_level": 0.95,
+                "standard_error": 0.0093
+              },
+              "height": {
+                "value": 2.1,
+                "unit": "m",
+                "ci_lower": 2.0864,
+                "ci_upper": 2.1136,
+                "confidence_level": 0.95,
+                "standard_error": 0.0069
+              },
+              "connected_room_id": null,
+              "center_world_2d": [
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "wall_id": "LIVI_W3",
+          "start_point": [
+            2.695,
+            3.902
+          ],
+          "end_point": [
+            -1.761,
+            3.902
+          ],
+          "length": {
+            "value": 4.4559,
+            "unit": "m",
+            "ci_lower": 4.4224,
+            "ci_upper": 4.4894,
+            "confidence_level": 0.95,
+            "standard_error": 0.0171
+          },
+          "height": {
+            "value": 2.6256,
+            "unit": "m",
+            "ci_lower": 2.6107,
+            "ci_upper": 2.6405,
+            "confidence_level": 0.95,
+            "standard_error": 0.0076
+          },
+          "normal": [
+            -0.0,
+            -1.0
+          ],
+          "surface_area": {
+            "value": 11.6995,
+            "unit": "m2",
+            "ci_lower": 11.516,
+            "ci_upper": 11.8829,
+            "confidence_level": 0.95,
+            "standard_error": 0.0936
+          },
+          "openings": [
+            {
+              "opening_id": "OP_LIV_ENTRY",
+              "type": "door",
+              "wall_id": "LIVI_W3",
+              "start_pos": 1.2,
+              "width": {
+                "value": 0.858,
+                "unit": "m",
+                "ci_lower": 0.8403,
+                "ci_upper": 0.8757,
+                "confidence_level": 0.95,
+                "standard_error": 0.009
+              },
+              "height": {
+                "value": 2.1,
+                "unit": "m",
+                "ci_lower": 2.0864,
+                "ci_upper": 2.1136,
+                "confidence_level": 0.95,
+                "standard_error": 0.0069
+              },
+              "connected_room_id": "hallway_connector",
+              "center_world_2d": [
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "wall_id": "LIVI_W4",
+          "start_point": [
+            -1.761,
+            3.902
+          ],
+          "end_point": [
+            -1.761,
+            -0.936
+          ],
+          "length": {
+            "value": 4.8381,
+            "unit": "m",
+            "ci_lower": 4.8022,
+            "ci_upper": 4.874,
+            "confidence_level": 0.95,
+            "standard_error": 0.0183
+          },
+          "height": {
+            "value": 2.6256,
+            "unit": "m",
+            "ci_lower": 2.6107,
+            "ci_upper": 2.6405,
+            "confidence_level": 0.95,
+            "standard_error": 0.0076
+          },
+          "normal": [
+            1.0,
+            0.0
+          ],
+          "surface_area": {
+            "value": 12.7032,
+            "unit": "m2",
+            "ci_lower": 12.504,
+            "ci_upper": 12.9024,
+            "confidence_level": 0.95,
+            "standard_error": 0.1016
+          },
+          "openings": []
+        }
+      ],
+      "openings": [
+        {
+          "opening_id": "OP_LIV_ENTRY",
+          "type": "door",
+          "wall_id": "LIVI_W3",
+          "start_pos": 1.2,
+          "width": {
+            "value": 0.858,
+            "unit": "m",
+            "ci_lower": 0.8403,
+            "ci_upper": 0.8757,
+            "confidence_level": 0.95,
+            "standard_error": 0.009
+          },
+          "height": {
+            "value": 2.1,
+            "unit": "m",
+            "ci_lower": 2.0864,
+            "ci_upper": 2.1136,
+            "confidence_level": 0.95,
+            "standard_error": 0.0069
+          },
+          "connected_room_id": "hallway_connector",
+          "center_world_2d": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "opening_id": "OP_LIV_WINDOW",
+          "type": "window",
+          "wall_id": "LIVI_W1",
+          "start_pos": 0.95,
+          "width": {
+            "value": 1.59,
+            "unit": "m",
+            "ci_lower": 1.5701,
+            "ci_upper": 1.6099,
+            "confidence_level": 0.95,
+            "standard_error": 0.0102
+          },
+          "height": {
+            "value": 1.4,
+            "unit": "m",
+            "ci_lower": 1.3879,
+            "ci_upper": 1.4121,
+            "confidence_level": 0.95,
+            "standard_error": 0.0062
+          },
+          "connected_room_id": null,
+          "center_world_2d": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "opening_id": "OP_LIV_PASSAGE",
+          "type": "passage",
+          "wall_id": "LIVI_W2",
+          "start_pos": 2.4,
+          "width": {
+            "value": 1.103,
+            "unit": "m",
+            "ci_lower": 1.0847,
+            "ci_upper": 1.1213,
+            "confidence_level": 0.95,
+            "standard_error": 0.0093
+          },
+          "height": {
+            "value": 2.1,
+            "unit": "m",
+            "ci_lower": 2.0864,
+            "ci_upper": 2.1136,
+            "confidence_level": 0.95,
+            "standard_error": 0.0069
+          },
+          "connected_room_id": null,
+          "center_world_2d": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "polygon_2d": [
+        [
+          -1.7610901713430047,
+          -0.9358174649842196
+        ],
+        [
+          2.69477330574643,
+          -0.9358174649842196
+        ],
+        [
+          2.69477330574643,
+          3.902308907478625
+        ],
+        [
+          -1.7610901713430047,
+          3.902308907478625
+        ]
+      ],
+      "damage_regions": [
+        {
+          "damage_id": "DMG_01",
+          "surface_id": "LIVI_W2",
+          "damage_class": "water_damage",
+          "extent_width": {
+            "value": 1.25,
+            "unit": "m",
+            "ci_lower": 1.2313,
+            "ci_upper": 1.2687,
+            "confidence_level": 0.95,
+            "standard_error": 0.0096
+          },
+          "extent_height": {
+            "value": 0.45,
+            "unit": "m",
+            "ci_lower": 0.4391,
+            "ci_upper": 0.4609,
+            "confidence_level": 0.95,
+            "standard_error": 0.0056
+          },
+          "surface_area": {
+            "value": 0.5625,
+            "unit": "m2",
+            "ci_lower": 0.5537,
+            "ci_upper": 0.5713,
+            "confidence_level": 0.95,
+            "standard_error": 0.0045
+          },
+          "confidence": 0.96,
+          "severity": "moderate",
+          "bounding_box_3d": null,
+          "description": "Water saturation staining along base of LIVI_W2"
+        }
+      ],
+      "concealed_flags": [
+        {
+          "flag_id": "FLAG_living_room_01",
+          "surface_id": "LIVI_W2",
+          "rule_id": "RULE_CONCEALED_WTR_01",
+          "rule_name": "Wall Cavity Trapped Moisture & Insulation Saturation",
+          "risk_score": 0.92,
+          "trigger_condition": "Moisture staining observed on lower 0.6m of gypsum board",
+          "evidence": "Continuous dampness and wood trim swelling spanning 1.25m",
+          "recommended_action": "Execute 2-foot flood cut, extract cavity moisture, and treat framing with antimicrobial."
+        }
+      ],
+      "scope_items": [
+        {
+          "item_id": "SCOPE_living_room_01",
+          "surface_id": "LIVI_W2",
+          "code": "DRYWALL_CUT",
+          "description": "Flood cut drywall 2ft and dispose contaminated materials",
+          "quantity": {
+            "value": 1.85,
+            "unit": "m",
+            "ci_lower": 1.8313,
+            "ci_upper": 1.8687,
+            "confidence_level": 0.95,
+            "standard_error": 0.0095
+          },
+          "unit": "m",
+          "unit_price_usd": 38.0,
+          "total_price_usd": 70.3
+        },
+        {
+          "item_id": "SCOPE_living_room_02",
+          "surface_id": "LIVI_W2",
+          "code": "BASEBOARD_REPLACE",
+          "description": "Remove and replace primed baseboard moulding",
+          "quantity": {
+            "value": 1.85,
+            "unit": "m",
+            "ci_lower": 1.8313,
+            "ci_upper": 1.8687,
+            "confidence_level": 0.95,
+            "standard_error": 0.0095
+          },
+          "unit": "m",
+          "unit_price_usd": 28.5,
+          "total_price_usd": 52.73
+        },
+        {
+          "item_id": "SCOPE_living_room_03",
+          "surface_id": "LIVI_W2",
+          "code": "INSULATION_REPLACE",
+          "description": "Remove wet fiberglass batt insulation and replace with R-13",
+          "quantity": {
+            "value": 1.13,
+            "unit": "m2",
+            "ci_lower": 1.1123,
+            "ci_upper": 1.1477,
+            "confidence_level": 0.95,
+            "standard_error": 0.009
+          },
+          "unit": "m2",
+          "unit_price_usd": 26.0,
+          "total_price_usd": 29.38
+        }
+      ]
+    }
+  ],
+  "total_floor_area": {
+    "value": 21.558,
+    "unit": "m2",
+    "ci_lower": 21.22,
+    "ci_upper": 21.896,
+    "confidence_level": 0.95,
+    "standard_error": 0.1725
+  },
+  "total_walls_count": 4,
+  "total_openings_count": 3,
+  "adjacency_graph": [
+    {
+      "from_room": "living_room",
+      "to_room": "hallway_connector",
+      "connection_type": "doorway_entry",
+      "width_m": 0.85
+    },
+    {
+      "from_room": "dining_room",
+      "to_room": "hallway_connector",
+      "connection_type": "passage_entry",
+      "width_m": 0.9
+    },
+    {
+      "from_room": "bathroom",
+      "to_room": "hallway_connector",
+      "connection_type": "doorway_bath",
+      "width_m": 0.75
+    }
+  ],
+  "drift_correction_applied": true,
+  "drift_metrics": {
+    "drift_correction_enabled": true,
+    "trajectory_length_m": 14.488,
+    "raw_loop_closure_error_m": 3.1791,
+    "raw_drift_rate_mm_per_m": 219.42,
+    "corrected_loop_closure_error_m": 0.0,
+    "method": "Plane-Anchored Pose Graph with Gravity Alignment"
+  },
+  "remediation_total_usd": 152.41,
+  "metadata": {
+    "overlap_detected": false,
+    "rooms_count": 1,
+    "connector_present": false,
+    "stitching_mode": "Topological Opening-Snapped Graph Optimization"
+  }
+}

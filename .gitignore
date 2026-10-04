@@ -8,3 +8,6 @@ extracted_frames/
 extracted_frames_c7/
 *.mp4
 data/*/*.mp4
+*.log
+benchmark_output.txt
+raw_recon_out.txt

@@ -26,7 +26,6 @@ class LidarPipeline:
     def run(
         self,
         capture_path: str,
-        ground_truth_path: Optional[str] = None, # Optional: only for evaluation
         output_dir: str = "outputs/lidar"
     ) -> PropertyPlan:
         os.makedirs(output_dir, exist_ok=True)
