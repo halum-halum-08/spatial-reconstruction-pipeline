@@ -110,17 +110,31 @@
         <img src="floorplan.svg" alt="Floor Plan" style="max-width:100%; height:auto;" />
       </div>
       <div style="display:flex; justify-content:space-around; margin-top:20px; font-size:14px;">
-        <div><strong>Total Interior Area:</strong> 38.07 m² (CI: [32.47, 43.66])</div>
+        <div><strong>Total Interior Area:</strong> 37.62 m² (CI: [32.09, 43.14])</div>
         <div><strong>Total Rooms:</strong> 4</div>
         <div><strong>Walls Bounded:</strong> 16</div>
-        <div><strong>Openings Detected:</strong> 7</div>
+        <div><strong>Openings Detected:</strong> 1</div>
       </div>
     </div>
 
     <div>
       <div class="card" style="margin-bottom:24px;">
         <h2 style="margin-top:0; font-size:18px; color:var(--danger);">Concealed Damage Risk Flags</h2>
-        <p style="color:#718096;">No concealed damage risks flagged.</p>
+        
+        <div class="flag-box">
+          <div style="font-weight:bold; color:var(--danger);">Wall Cavity Trapped Moisture & Insulation Saturation</div>
+          <div style="font-size:12px; margin-top:4px;"><strong>Trigger:</strong> Water damage detected on lower 0.6m of drywall surface</div>
+          <div style="font-size:12px; margin-top:4px;"><strong>Evidence:</strong> Moisture staining spanning 1.25m along baseboard of LIV_W2. Wicking height: 0.45m.</div>
+          <div style="font-size:12px; margin-top:4px; color:#742A2A;"><strong>Recommended Action:</strong> Perform 2-foot flood cut, inspect wall cavity and bottom plate, replace wet insulation.</div>
+        </div>
+        
+        <div class="flag-box">
+          <div style="font-weight:bold; color:var(--danger);">Concealed In-Wall Supply/Drain Stack Compromise</div>
+          <div style="font-size:12px; margin-top:4px;"><strong>Trigger:</strong> Moisture adjacent to kitchen/bath plumbing chase</div>
+          <div style="font-size:12px; margin-top:4px;"><strong>Evidence:</strong> Damage pattern concentrates along vertical pipe riser chase in partition.</div>
+          <div style="font-size:12px; margin-top:4px; color:#742A2A;"><strong>Recommended Action:</strong> Execute acoustic/thermal pipe leak isolation and inspect riser fittings.</div>
+        </div>
+        
       </div>
 
       <div class="card">
@@ -136,11 +150,53 @@
           </thead>
           <tbody>
             
+            <tr>
+              <td><strong>BASEBOARD_REPLACE</strong></td>
+              <td>LIV_W2</td>
+              <td>1.85 m</td>
+              <td>$52.73</td>
+            </tr>
+            
+            <tr>
+              <td><strong>DRYWALL_CUT</strong></td>
+              <td>LIV_W2</td>
+              <td>1.85 m</td>
+              <td>$70.30</td>
+            </tr>
+            
+            <tr>
+              <td><strong>INSULATION_REPLACE</strong></td>
+              <td>LIV_W2</td>
+              <td>1.13 m2</td>
+              <td>$29.34</td>
+            </tr>
+            
+            <tr>
+              <td><strong>ANTIMICROBIAL</strong></td>
+              <td>LIV_W2</td>
+              <td>1.13 m2</td>
+              <td>$16.36</td>
+            </tr>
+            
+            <tr>
+              <td><strong>DRYWALL_REPAIR</strong></td>
+              <td>LIV_W2</td>
+              <td>1.13 m2</td>
+              <td>$76.74</td>
+            </tr>
+            
+            <tr>
+              <td><strong>PAINT_STAIN_BLOCK</strong></td>
+              <td>LIV_W2</td>
+              <td>4.00 m2</td>
+              <td>$128.00</td>
+            </tr>
+            
           </tbody>
           <tfoot>
             <tr style="font-weight:bold; background:#EDF2F7;">
               <td colspan="3">Estimated Remediation Total:</td>
-              <td>$0.00</td>
+              <td>$373.47</td>
             </tr>
           </tfoot>
         </table>

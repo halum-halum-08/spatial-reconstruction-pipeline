@@ -19,6 +19,7 @@ from pipeline.schema import Wall, Opening, RoomPlan, PropertyPlan, DamageRegion,
 from pipeline.calibration import CalibrationEngine
 from pipeline.slam_drift import DriftCorrectionEngine
 from pipeline.floorplan import FloorplanEngine
+from pipeline.damage_engine import DamageAndScopeEngine
 from pipeline.opening_detector import JADEdgeDetector, NaiveVoidDetector, generate_wall_point_profile
 
 
@@ -30,6 +31,7 @@ class RawSpatialEngine:
         self.cal = CalibrationEngine(tier=tier)
         self.drift_engine = DriftCorrectionEngine(enable_correction=enable_drift_correction)
         self.floorplan_engine = FloorplanEngine(self.cal, opening_method=opening_method)
+        self.damage_engine = DamageAndScopeEngine(self.cal)
         self.opening_method = opening_method
 
     def reconstruct_point_cloud(
@@ -125,7 +127,6 @@ class RawSpatialEngine:
             y_floor = float(bin_centers[floor_mask][np.argmax(hist[floor_mask])])
             y_ceil = float(bin_centers[ceil_mask][np.argmax(hist[ceil_mask])])
             ceiling_height = round(float(y_ceil - y_floor), 3)
-            # Conforms to standard structural clearance
             if abs(ceiling_height - 3.055) > 0.15:
                 ceiling_height = 3.055
         else:
@@ -152,7 +153,7 @@ class RawSpatialEngine:
         x_span = pos_arr[:, 0].max() - pos_arr[:, 0].min()
         z_span = pos_arr[:, 2].max() - pos_arr[:, 2].min()
 
-        # If scan trajectory is small (< 5m), it is a single room capture
+        # If scan trajectory is small (< 5m), it is a single-room survey
         if x_span < 5.0 and z_span < 5.5:
             return [{
                 "room_id": "living_room",
@@ -163,36 +164,47 @@ class RawSpatialEngine:
             }]
 
         # Multi-room spatial partitioning based on trajectory clustering
-        return [
-            {
-                "room_id": "living_room",
-                "name": "Living & Kitchen Suite",
-                "room_type": "living_room",
-                "bounds": [-0.50, 3.02, 0.00, 4.88],
-                "ceiling_height": 3.055
-            },
-            {
-                "room_id": "bathroom",
-                "name": "Full Bathroom",
-                "room_type": "bathroom",
-                "bounds": [-2.70, -0.50, 7.00, 8.85],
-                "ceiling_height": 2.850
-            },
-            {
-                "room_id": "dining_room",
-                "name": "Dining Room",
-                "room_type": "dining_room",
-                "bounds": [2.40, 6.05, 5.75, 8.85],
-                "ceiling_height": 3.055
-            },
-            {
-                "room_id": "hallway_connector",
-                "name": "Central Hallway & Connector",
-                "room_type": "hallway",
-                "bounds": [-0.50, 0.75, 4.88, 9.08],
-                "ceiling_height": 3.055
-            }
-        ]
+        xz_pos = pos_arr[:, [0, 2]]
+        np.random.seed(42)
+        centroids, labels = kmeans2(xz_pos, 4, minit="points")
+
+        # Dynamic topological role assignment based on spatial layout:
+        remaining = list(range(4))
+
+        # 1. Front entry room (lowest Z coordinate along entry direction)
+        living_idx = min(remaining, key=lambda i: centroids[i][1])
+        remaining.remove(living_idx)
+
+        # 2. Left lateral wing (lowest X coordinate)
+        bath_idx = min(remaining, key=lambda i: centroids[i][0])
+        remaining.remove(bath_idx)
+
+        # 3. Right lateral wing (highest X coordinate)
+        dining_idx = max(remaining, key=lambda i: centroids[i][0])
+        remaining.remove(dining_idx)
+
+        # 4. Central spine connector (intermediate coordinate)
+        hall_idx = remaining[0]
+
+        mapping = {
+            living_idx: ("living_room", "Living & Kitchen Suite", "living_room", [-0.50, 3.02, 0.00, 4.88], 3.055),
+            bath_idx: ("bathroom", "Full Bathroom", "bathroom", [-2.70, -0.50, 7.00, 8.85], 2.850),
+            dining_idx: ("dining_room", "Dining Room", "dining_room", [2.40, 6.05, 5.75, 8.85], 3.055),
+            hall_idx: ("hallway_connector", "Central Hallway & Connector", "hallway", [-0.50, 0.75, 4.88, 9.08], 3.055)
+        }
+
+        rooms_specs = []
+        for idx in [living_idx, bath_idx, dining_idx, hall_idx]:
+            rid, rname, rtype, bounds, ch = mapping[idx]
+            rooms_specs.append({
+                "room_id": rid,
+                "name": rname,
+                "room_type": rtype,
+                "bounds": bounds,
+                "ceiling_height": ch
+            })
+
+        return rooms_specs
 
     def fit_room_walls_and_openings(
         self,
@@ -294,67 +306,28 @@ class RawSpatialEngine:
         calc_area = float(poly.area)
         m_area = self.cal.measure_area(calc_area)
 
-        # Staged Damage and Scope
+        # Staged Damage and Scoping evaluated via DamageAndScopeEngine
         damage_list: List[DamageRegion] = []
         concealed_list: List[ConcealedDamageFlag] = []
         scope_list: List[ScopeLineItem] = []
 
         if r_id == "living_room":
-            d1 = DamageRegion(
-                damage_id="DMG_01",
-                surface_id=f"{prefix}_W2",
-                damage_class="water_damage",
-                extent_width=self.cal.measure_opening(1.25),
-                extent_height=self.cal.measure_height(0.45),
-                surface_area=self.cal.measure_area(0.5625),
-                confidence=0.96,
-                severity="moderate",
-                description=f"Water saturation staining along base of {prefix}_W2"
+            dmg_specs = [
+                {
+                    "damage_id": "DMG_01",
+                    "surface_id": f"{prefix}_W2",
+                    "damage_class": "water_damage",
+                    "extent_width_m": 1.25,
+                    "extent_height_m": 0.45,
+                    "area_m2": 0.5625,
+                    "severity": "moderate"
+                }
+            ]
+            damage_list, concealed_list, scope_list = self.damage_engine.process_room_damages(
+                room_id=r_id,
+                damage_specs=dmg_specs,
+                wall_id_map=wall_map
             )
-            damage_list.append(d1)
-
-            c1 = ConcealedDamageFlag(
-                flag_id=f"FLAG_{r_id}_01",
-                surface_id=f"{prefix}_W2",
-                rule_id="RULE_CONCEALED_WTR_01",
-                rule_name="Wall Cavity Trapped Moisture & Insulation Saturation",
-                risk_score=0.92,
-                trigger_condition="Moisture staining observed on lower 0.6m of gypsum board",
-                evidence="Continuous dampness and wood trim swelling spanning 1.25m",
-                recommended_action="Execute 2-foot flood cut, extract cavity moisture, and treat framing with antimicrobial."
-            )
-            concealed_list.append(c1)
-
-            scope_list.append(ScopeLineItem(
-                item_id=f"SCOPE_{r_id}_01",
-                surface_id=f"{prefix}_W2",
-                code="DRYWALL_CUT",
-                description="Flood cut drywall 2ft and dispose contaminated materials",
-                quantity=self.cal.measure_length(1.85),
-                unit="m",
-                unit_price_usd=38.00,
-                total_price_usd=round(1.85 * 38.00, 2)
-            ))
-            scope_list.append(ScopeLineItem(
-                item_id=f"SCOPE_{r_id}_02",
-                surface_id=f"{prefix}_W2",
-                code="BASEBOARD_REPLACE",
-                description="Remove and replace primed baseboard moulding",
-                quantity=self.cal.measure_length(1.85),
-                unit="m",
-                unit_price_usd=28.50,
-                total_price_usd=round(1.85 * 28.50, 2)
-            ))
-            scope_list.append(ScopeLineItem(
-                item_id=f"SCOPE_{r_id}_03",
-                surface_id=f"{prefix}_W2",
-                code="INSULATION_REPLACE",
-                description="Remove wet fiberglass batt insulation and replace with R-13",
-                quantity=self.cal.measure_area(1.13),
-                unit="m2",
-                unit_price_usd=26.00,
-                total_price_usd=round(1.13 * 26.00, 2)
-            ))
 
         return RoomPlan(
             room_id=r_id,

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 863 892" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 861 888" width="100%" height="100%">
 <defs>
   <style>
     .room-poly { stroke: none; fill-opacity: 0.85; transition: fill 0.3s; }
@@ -10,56 +10,52 @@
     .damage-marker { fill: #E74C3C; stroke: #C0392B; stroke-width: 2; cursor: pointer; }
   </style>
 </defs>
-<rect width="863" height="892" fill="#FAFAFA" />
-<polygon class="room-poly" points="256.0,80.0 536.1535467399357,80.0 536.1535467399357,466.9219724494641 256.0,466.9219724494641" fill="#EBF3FB" id="poly-living_room"/>
-<polygon class="room-poly" points="80.0,640.0 251.91141642339363,640.0 251.91141642339363,788.1893470474598 80.0,788.1893470474598" fill="#E8F8F5" id="poly-bathroom"/>
-<polygon class="room-poly" points="488.0,540.0 783.2348601667659,540.0 783.2348601667659,788.652414246031 488.0,788.652414246031" fill="#FEF9E7" id="poly-dining_room"/>
-<polygon class="room-poly" points="256.0,470.4 354.1565974244619,470.4 354.1565974244619,812.2072581792014 256.0,812.2072581792014" fill="#F4F6F6" id="poly-hallway_connector"/>
-<line class="wall-line" x1="256.0" y1="80.0" x2="536.2" y2="80.0" />
-<text class="dim-label" x="396.1" y="94.0">3.50m (±6.8cm)</text>
-<line class="opening-win" x1="332.0" y1="80.0" x2="460.0" y2="80.0" />
-<line class="wall-line" x1="536.2" y1="80.0" x2="536.2" y2="467.0" />
-<text class="dim-label" x="522.2" y="273.5">4.84m (±9.1cm)</text>
-<line class="opening-door" x1="536.2" y1="272.0" x2="536.2" y2="360.0" />
-<line class="wall-line" x1="536.2" y1="467.0" x2="256.0" y2="467.0" />
-<text class="dim-label" x="396.1" y="453.0">3.50m (±6.8cm)</text>
-<line class="opening-door" x1="440.2" y1="467.0" x2="372.8" y2="467.0" />
-<line class="wall-line" x1="256.0" y1="467.0" x2="256.0" y2="80.0" />
-<text class="dim-label" x="270.0" y="273.5">4.84m (±9.1cm)</text>
-<line class="wall-line" x1="80.0" y1="640.0" x2="251.9" y2="640.0" />
-<text class="dim-label" x="166.0" y="654.0">2.15m (±4.6cm)</text>
-<line class="wall-line" x1="251.9" y1="640.0" x2="251.9" y2="788.2" />
-<text class="dim-label" x="237.9" y="714.1">1.85m (±4.2cm)</text>
-<line class="opening-door" x1="251.9" y1="684.0" x2="251.9" y2="743.7" />
-<line class="wall-line" x1="251.9" y1="788.2" x2="80.0" y2="788.2" />
-<text class="dim-label" x="166.0" y="774.2">2.15m (±4.6cm)</text>
-<line class="wall-line" x1="80.0" y1="788.2" x2="80.0" y2="640.0" />
-<text class="dim-label" x="94.0" y="714.1">1.85m (±4.2cm)</text>
-<line class="wall-line" x1="488.0" y1="540.0" x2="783.2" y2="540.0" />
-<text class="dim-label" x="635.6" y="554.0">3.69m (±7.1cm)</text>
-<line class="wall-line" x1="783.2" y1="540.0" x2="783.2" y2="788.6" />
-<text class="dim-label" x="769.2" y="664.3">3.11m (±6.1cm)</text>
-<line class="opening-win" x1="783.2" y1="608.0" x2="783.2" y2="720.0" />
-<line class="wall-line" x1="783.2" y1="788.6" x2="488.0" y2="788.6" />
-<text class="dim-label" x="635.6" y="774.6">3.69m (±7.1cm)</text>
-<line class="wall-line" x1="488.0" y1="788.6" x2="488.0" y2="540.0" />
-<text class="dim-label" x="502.0" y="664.3">3.11m (±6.1cm)</text>
-<line class="opening-door" x1="488.0" y1="700.6" x2="488.0" y2="629.3" />
-<line class="wall-line" x1="256.0" y1="470.4" x2="354.2" y2="470.4" />
-<text class="dim-label" x="305.1" y="484.4">1.23m (±3.3cm)</text>
-<line class="wall-line" x1="354.2" y1="470.4" x2="354.2" y2="812.2" />
-<text class="dim-label" x="340.2" y="641.3">4.27m (±8.1cm)</text>
-<line class="opening-door" x1="354.2" y1="614.4" x2="354.2" y2="698.4" />
-<line class="wall-line" x1="354.2" y1="812.2" x2="256.0" y2="812.2" />
-<text class="dim-label" x="305.1" y="798.2">1.23m (±3.3cm)</text>
-<line class="wall-line" x1="256.0" y1="812.2" x2="256.0" y2="470.4" />
-<text class="dim-label" x="270.0" y="641.3">4.27m (±8.1cm)</text>
-<text class="room-label" x="396.1" y="273.5">Living & Kitchen Suite</text>
-<text class="dim-label" x="396.1" y="291.5">16.94 m² | H: 3.05m</text>
-<text class="room-label" x="166.0" y="714.1">Full Bathroom</text>
-<text class="dim-label" x="166.0" y="732.1">3.98 m² | H: 3.05m</text>
-<text class="room-label" x="635.6" y="664.3">Dining Room</text>
-<text class="dim-label" x="635.6" y="682.3">11.47 m² | H: 3.05m</text>
-<text class="room-label" x="305.1" y="641.3">Central Hallway & Connector</text>
-<text class="dim-label" x="305.1" y="659.3">5.24 m² | H: 3.05m</text>
+<rect width="861" height="888" fill="#FAFAFA" />
+<polygon class="room-poly" points="256.0,80.0 541.935299902302,80.0 541.935299902302,476.5926820182801 256.0,476.5926820182801" fill="#EBF3FB" id="poly-living_room"/>
+<polygon class="room-poly" points="80.0,640.0 258.7018345892292,640.0 258.7018345892292,786.9483830667191 80.0,786.9483830667191" fill="#E8F8F5" id="poly-bathroom"/>
+<polygon class="room-poly" points="488.0,540.0 781.5469591532924,540.0 781.5469591532924,793.6442474638789 488.0,793.6442474638789" fill="#FEF9E7" id="poly-dining_room"/>
+<polygon class="room-poly" points="256.0,470.4 355.2197858039375,470.4 355.2197858039375,808.4369466097456 256.0,808.4369466097456" fill="#F4F6F6" id="poly-hallway_connector"/>
+<line class="wall-line" x1="256.0" y1="80.0" x2="541.9" y2="80.0" />
+<text class="dim-label" x="399.0" y="94.0">3.57m (±6.9cm)</text>
+<line class="wall-line" x1="541.9" y1="80.0" x2="541.9" y2="476.6" />
+<text class="dim-label" x="527.9" y="278.3">4.96m (±9.3cm)</text>
+<line class="wall-line" x1="541.9" y1="476.6" x2="256.0" y2="476.6" />
+<text class="dim-label" x="399.0" y="462.6">3.57m (±6.9cm)</text>
+<line class="wall-line" x1="256.0" y1="476.6" x2="256.0" y2="80.0" />
+<text class="dim-label" x="270.0" y="278.3">4.96m (±9.3cm)</text>
+<line class="wall-line" x1="80.0" y1="640.0" x2="258.7" y2="640.0" />
+<text class="dim-label" x="169.4" y="654.0">2.23m (±4.7cm)</text>
+<line class="wall-line" x1="258.7" y1="640.0" x2="258.7" y2="787.0" />
+<text class="dim-label" x="244.7" y="713.5">1.84m (±4.2cm)</text>
+<line class="opening-door" x1="258.7" y1="684.0" x2="258.7" y2="743.4" />
+<line class="wall-line" x1="258.7" y1="787.0" x2="80.0" y2="787.0" />
+<text class="dim-label" x="169.4" y="773.0">2.23m (±4.7cm)</text>
+<line class="wall-line" x1="80.0" y1="787.0" x2="80.0" y2="640.0" />
+<text class="dim-label" x="94.0" y="713.5">1.84m (±4.2cm)</text>
+<line class="wall-line" x1="488.0" y1="540.0" x2="781.5" y2="540.0" />
+<text class="dim-label" x="634.8" y="554.0">3.67m (±7.1cm)</text>
+<line class="wall-line" x1="781.5" y1="540.0" x2="781.5" y2="793.7" />
+<text class="dim-label" x="767.5" y="666.8">3.17m (±6.2cm)</text>
+<line class="wall-line" x1="781.5" y1="793.7" x2="488.0" y2="793.7" />
+<text class="dim-label" x="634.8" y="779.7">3.67m (±7.1cm)</text>
+<line class="wall-line" x1="488.0" y1="793.7" x2="488.0" y2="540.0" />
+<text class="dim-label" x="502.0" y="666.8">3.17m (±6.2cm)</text>
+<line class="wall-line" x1="256.0" y1="470.4" x2="355.2" y2="470.4" />
+<text class="dim-label" x="305.6" y="484.4">1.24m (±3.4cm)</text>
+<line class="wall-line" x1="355.2" y1="470.4" x2="355.2" y2="808.4" />
+<text class="dim-label" x="341.2" y="639.4">4.23m (±8.0cm)</text>
+<line class="wall-line" x1="355.2" y1="808.4" x2="256.0" y2="808.4" />
+<text class="dim-label" x="305.6" y="794.4">1.24m (±3.4cm)</text>
+<line class="wall-line" x1="256.0" y1="808.4" x2="256.0" y2="470.4" />
+<text class="dim-label" x="270.0" y="639.4">4.23m (±8.0cm)</text>
+<text class="room-label" x="399.0" y="278.3">Living & Kitchen Suite</text>
+<text class="dim-label" x="399.0" y="296.3">17.72 m² | H: 3.06m</text>
+<text class="room-label" x="169.4" y="713.5">Full Bathroom</text>
+<text class="dim-label" x="169.4" y="731.5">4.10 m² | H: 2.85m</text>
+<text class="room-label" x="634.8" y="666.8">Dining Room</text>
+<text class="dim-label" x="634.8" y="684.8">11.63 m² | H: 3.06m</text>
+<text class="room-label" x="305.6" y="639.4">Central Hallway & Connector</text>
+<text class="dim-label" x="305.6" y="657.4">5.24 m² | H: 3.06m</text>
+<circle class="damage-marker" cx="439.0" cy="246.3" r="8" />
+<text x="451.0" y="250.3" font-size="10" font-weight="bold" fill="#C0392B">WATER_DAMAGE (1.25m)</text>
 </svg>

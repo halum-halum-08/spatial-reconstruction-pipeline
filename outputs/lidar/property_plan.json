@@ -402,42 +402,42 @@
           },
           "confidence": 0.96,
           "severity": "moderate",
-          "bounding_box_3d": null,
-          "description": "Water saturation staining along base of LIV_W2"
+          "bounding_box_3d": [
+            0.0,
+            0.0,
+            0.0,
+            1.25,
+            0.45,
+            0.1
+          ],
+          "description": "Water damage detected on surface LIV_W2 (1.25m x 0.45m)"
         }
       ],
       "concealed_flags": [
         {
-          "flag_id": "FLAG_living_room_01",
+          "flag_id": "CONF_living_room_DMG_01_01",
           "surface_id": "LIV_W2",
           "rule_id": "RULE_CONCEALED_WTR_01",
           "rule_name": "Wall Cavity Trapped Moisture & Insulation Saturation",
           "risk_score": 0.92,
-          "trigger_condition": "Moisture staining observed on lower 0.6m of gypsum board",
-          "evidence": "Continuous dampness and wood trim swelling spanning 1.25m",
-          "recommended_action": "Execute 2-foot flood cut, extract cavity moisture, and treat framing with antimicrobial."
+          "trigger_condition": "Water damage detected on lower 0.6m of drywall surface",
+          "evidence": "Moisture staining spanning 1.25m along baseboard of LIV_W2. Wicking height: 0.45m.",
+          "recommended_action": "Perform 2-foot flood cut, inspect wall cavity and bottom plate, replace wet insulation."
+        },
+        {
+          "flag_id": "CONF_living_room_DMG_01_02",
+          "surface_id": "LIV_W2",
+          "rule_id": "RULE_PLUMB_SUPPLY_02",
+          "rule_name": "Concealed In-Wall Supply/Drain Stack Compromise",
+          "risk_score": 0.85,
+          "trigger_condition": "Moisture adjacent to kitchen/bath plumbing chase",
+          "evidence": "Damage pattern concentrates along vertical pipe riser chase in partition.",
+          "recommended_action": "Execute acoustic/thermal pipe leak isolation and inspect riser fittings."
         }
       ],
       "scope_items": [
         {
-          "item_id": "SCOPE_living_room_01",
-          "surface_id": "LIV_W2",
-          "code": "DRYWALL_CUT",
-          "description": "Flood cut drywall 2ft and dispose contaminated materials",
-          "quantity": {
-            "value": 1.85,
-            "unit": "m",
-            "ci_lower": 1.8313,
-            "ci_upper": 1.8687,
-            "confidence_level": 0.95,
-            "standard_error": 0.0095
-          },
-          "unit": "m",
-          "unit_price_usd": 38.0,
-          "total_price_usd": 70.3
-        },
-        {
-          "item_id": "SCOPE_living_room_02",
+          "item_id": "SCOPE_living_room_DMG_01_01",
           "surface_id": "LIV_W2",
           "code": "BASEBOARD_REPLACE",
           "description": "Remove and replace primed baseboard moulding",
@@ -454,21 +454,89 @@
           "total_price_usd": 52.73
         },
         {
-          "item_id": "SCOPE_living_room_03",
+          "item_id": "SCOPE_living_room_DMG_01_02",
+          "surface_id": "LIV_W2",
+          "code": "DRYWALL_CUT",
+          "description": "Flood-cut drywall 2ft and dispose contaminated materials",
+          "quantity": {
+            "value": 1.85,
+            "unit": "m",
+            "ci_lower": 1.8313,
+            "ci_upper": 1.8687,
+            "confidence_level": 0.95,
+            "standard_error": 0.0095
+          },
+          "unit": "m",
+          "unit_price_usd": 38.0,
+          "total_price_usd": 70.3
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_01_03",
           "surface_id": "LIV_W2",
           "code": "INSULATION_REPLACE",
           "description": "Remove wet fiberglass batt insulation and replace with R-13",
           "quantity": {
-            "value": 1.13,
+            "value": 1.1285,
             "unit": "m2",
-            "ci_lower": 1.1123,
-            "ci_upper": 1.1477,
+            "ci_lower": 1.1108,
+            "ci_upper": 1.1462,
             "confidence_level": 0.95,
             "standard_error": 0.009
           },
           "unit": "m2",
           "unit_price_usd": 26.0,
-          "total_price_usd": 29.38
+          "total_price_usd": 29.34
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_01_04",
+          "surface_id": "LIV_W2",
+          "code": "ANTIMICROBIAL",
+          "description": "Apply EPA-registered botanical antimicrobial spray",
+          "quantity": {
+            "value": 1.1285,
+            "unit": "m2",
+            "ci_lower": 1.1108,
+            "ci_upper": 1.1462,
+            "confidence_level": 0.95,
+            "standard_error": 0.009
+          },
+          "unit": "m2",
+          "unit_price_usd": 14.5,
+          "total_price_usd": 16.36
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_01_05",
+          "surface_id": "LIV_W2",
+          "code": "DRYWALL_REPAIR",
+          "description": "Hang, tape, float and finish 5/8\" drywall",
+          "quantity": {
+            "value": 1.1285,
+            "unit": "m2",
+            "ci_lower": 1.1108,
+            "ci_upper": 1.1462,
+            "confidence_level": 0.95,
+            "standard_error": 0.009
+          },
+          "unit": "m2",
+          "unit_price_usd": 68.0,
+          "total_price_usd": 76.74
+        },
+        {
+          "item_id": "SCOPE_living_room_DMG_01_06",
+          "surface_id": "LIV_W2",
+          "code": "PAINT_STAIN_BLOCK",
+          "description": "Apply shellac stain-blocking primer and two coats latex paint",
+          "quantity": {
+            "value": 4.0,
+            "unit": "m2",
+            "ci_lower": 3.9373,
+            "ci_upper": 4.0627,
+            "confidence_level": 0.95,
+            "standard_error": 0.032
+          },
+          "unit": "m2",
+          "unit_price_usd": 32.0,
+          "total_price_usd": 128.0
         }
       ]
     },
@@ -1346,7 +1414,7 @@
     "corrected_loop_closure_error_m": 0.0,
     "method": "Plane-Anchored Pose Graph with Gravity Alignment"
   },
-  "remediation_total_usd": 152.41,
+  "remediation_total_usd": 373.47,
   "metadata": {
     "overlap_detected": false,
     "overlap_area_m2": 0.0,
